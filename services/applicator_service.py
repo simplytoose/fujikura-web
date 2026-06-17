@@ -175,9 +175,15 @@ class ApplicatorService:
         seen = set()
         unique_results = []
         for r in results:
+<<<<<<< HEAD
             if r['code'] not in seen:
                 unique_results.append(r)
                 seen.add(r['code'])
+=======
+            if r['id'] not in seen:
+                unique_results.append(r)
+                seen.add(r['id'])
+>>>>>>> 2741c9e (24)
 
         return [Applicator.from_dict(a) for a in unique_results]
 
