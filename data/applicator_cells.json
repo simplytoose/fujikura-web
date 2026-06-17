@@ -1,0 +1,2284 @@
+{
+  "records": [
+    {
+      "id": 1,
+      "cell_number": 1,
+      "is_occupied": true,
+      "applicator_id": 2,
+      "created_at": "2026-06-08T15:23:51.413632",
+      "updated_at": "2026-06-15T18:44:10.596218"
+    },
+    {
+      "id": 2,
+      "cell_number": 2,
+      "is_occupied": true,
+      "applicator_id": 3,
+      "created_at": "2026-06-08T15:23:51.414625",
+      "updated_at": "2026-06-15T18:44:10.606512"
+    },
+    {
+      "id": 3,
+      "cell_number": 3,
+      "is_occupied": true,
+      "applicator_id": 4,
+      "created_at": "2026-06-08T15:23:51.415623",
+      "updated_at": "2026-06-15T18:44:10.616540"
+    },
+    {
+      "id": 4,
+      "cell_number": 4,
+      "is_occupied": true,
+      "applicator_id": 5,
+      "created_at": "2026-06-08T15:23:51.416903",
+      "updated_at": "2026-06-15T18:44:10.625594"
+    },
+    {
+      "id": 5,
+      "cell_number": 5,
+      "is_occupied": true,
+      "applicator_id": 6,
+      "created_at": "2026-06-08T15:23:51.418253",
+      "updated_at": "2026-06-15T18:44:10.634741"
+    },
+    {
+      "id": 6,
+      "cell_number": 6,
+      "is_occupied": true,
+      "applicator_id": 7,
+      "created_at": "2026-06-08T15:23:51.419457",
+      "updated_at": "2026-06-15T18:44:10.644369"
+    },
+    {
+      "id": 7,
+      "cell_number": 7,
+      "is_occupied": true,
+      "applicator_id": 8,
+      "created_at": "2026-06-08T15:23:51.420373",
+      "updated_at": "2026-06-15T18:44:10.653412"
+    },
+    {
+      "id": 8,
+      "cell_number": 8,
+      "is_occupied": true,
+      "applicator_id": 9,
+      "created_at": "2026-06-08T15:23:51.421350",
+      "updated_at": "2026-06-15T18:44:10.662431"
+    },
+    {
+      "id": 9,
+      "cell_number": 9,
+      "is_occupied": true,
+      "applicator_id": 10,
+      "created_at": "2026-06-08T15:23:51.422843",
+      "updated_at": "2026-06-15T18:44:10.673591"
+    },
+    {
+      "id": 10,
+      "cell_number": 10,
+      "is_occupied": true,
+      "applicator_id": 12,
+      "created_at": "2026-06-08T15:23:51.424084",
+      "updated_at": "2026-06-15T18:44:10.684797"
+    },
+    {
+      "id": 11,
+      "cell_number": 11,
+      "is_occupied": true,
+      "applicator_id": 13,
+      "created_at": "2026-06-08T15:23:51.425410",
+      "updated_at": "2026-06-15T18:44:10.695264"
+    },
+    {
+      "id": 12,
+      "cell_number": 12,
+      "is_occupied": true,
+      "applicator_id": 14,
+      "created_at": "2026-06-08T15:23:51.426571",
+      "updated_at": "2026-06-15T18:44:10.705077"
+    },
+    {
+      "id": 13,
+      "cell_number": 13,
+      "is_occupied": true,
+      "applicator_id": 15,
+      "created_at": "2026-06-08T15:23:51.427653",
+      "updated_at": "2026-06-15T18:44:10.718917"
+    },
+    {
+      "id": 14,
+      "cell_number": 14,
+      "is_occupied": true,
+      "applicator_id": 16,
+      "created_at": "2026-06-08T15:23:51.428687",
+      "updated_at": "2026-06-15T18:44:10.738207"
+    },
+    {
+      "id": 15,
+      "cell_number": 15,
+      "is_occupied": true,
+      "applicator_id": 17,
+      "created_at": "2026-06-08T15:23:51.429789",
+      "updated_at": "2026-06-15T18:44:10.758367"
+    },
+    {
+      "id": 16,
+      "cell_number": 16,
+      "is_occupied": true,
+      "applicator_id": 18,
+      "created_at": "2026-06-08T15:23:51.430988",
+      "updated_at": "2026-06-15T18:44:10.776853"
+    },
+    {
+      "id": 17,
+      "cell_number": 17,
+      "is_occupied": true,
+      "applicator_id": 19,
+      "created_at": "2026-06-08T15:23:51.432083",
+      "updated_at": "2026-06-15T18:44:10.798891"
+    },
+    {
+      "id": 18,
+      "cell_number": 18,
+      "is_occupied": true,
+      "applicator_id": 20,
+      "created_at": "2026-06-08T15:23:51.433242",
+      "updated_at": "2026-06-15T18:44:10.820146"
+    },
+    {
+      "id": 19,
+      "cell_number": 19,
+      "is_occupied": true,
+      "applicator_id": 21,
+      "created_at": "2026-06-08T15:23:51.434330",
+      "updated_at": "2026-06-15T18:44:10.839103"
+    },
+    {
+      "id": 20,
+      "cell_number": 20,
+      "is_occupied": true,
+      "applicator_id": 22,
+      "created_at": "2026-06-08T15:23:51.435681",
+      "updated_at": "2026-06-15T18:44:10.855687"
+    },
+    {
+      "id": 21,
+      "cell_number": 21,
+      "is_occupied": true,
+      "applicator_id": 23,
+      "created_at": "2026-06-08T15:23:51.436928",
+      "updated_at": "2026-06-15T18:44:10.871279"
+    },
+    {
+      "id": 22,
+      "cell_number": 22,
+      "is_occupied": true,
+      "applicator_id": 24,
+      "created_at": "2026-06-08T15:23:51.438021",
+      "updated_at": "2026-06-15T18:44:10.889681"
+    },
+    {
+      "id": 23,
+      "cell_number": 23,
+      "is_occupied": true,
+      "applicator_id": 25,
+      "created_at": "2026-06-08T15:23:51.439323",
+      "updated_at": "2026-06-15T18:44:10.904719"
+    },
+    {
+      "id": 24,
+      "cell_number": 24,
+      "is_occupied": true,
+      "applicator_id": 26,
+      "created_at": "2026-06-08T15:23:51.441132",
+      "updated_at": "2026-06-15T18:44:10.921773"
+    },
+    {
+      "id": 25,
+      "cell_number": 25,
+      "is_occupied": true,
+      "applicator_id": 27,
+      "created_at": "2026-06-08T15:23:51.442387",
+      "updated_at": "2026-06-15T18:44:10.935964"
+    },
+    {
+      "id": 26,
+      "cell_number": 26,
+      "is_occupied": true,
+      "applicator_id": 28,
+      "created_at": "2026-06-08T15:23:51.443529",
+      "updated_at": "2026-06-15T18:44:10.948652"
+    },
+    {
+      "id": 27,
+      "cell_number": 27,
+      "is_occupied": true,
+      "applicator_id": 29,
+      "created_at": "2026-06-08T15:23:51.444596",
+      "updated_at": "2026-06-15T18:44:10.962072"
+    },
+    {
+      "id": 28,
+      "cell_number": 28,
+      "is_occupied": true,
+      "applicator_id": 30,
+      "created_at": "2026-06-08T15:23:51.445744",
+      "updated_at": "2026-06-15T18:44:10.974053"
+    },
+    {
+      "id": 29,
+      "cell_number": 29,
+      "is_occupied": true,
+      "applicator_id": 31,
+      "created_at": "2026-06-08T15:23:51.446895",
+      "updated_at": "2026-06-15T18:44:10.985877"
+    },
+    {
+      "id": 30,
+      "cell_number": 30,
+      "is_occupied": true,
+      "applicator_id": 32,
+      "created_at": "2026-06-08T15:23:51.448398",
+      "updated_at": "2026-06-15T18:44:10.997428"
+    },
+    {
+      "id": 31,
+      "cell_number": 31,
+      "is_occupied": true,
+      "applicator_id": 33,
+      "created_at": "2026-06-08T15:23:51.449797",
+      "updated_at": "2026-06-15T18:44:11.007652"
+    },
+    {
+      "id": 32,
+      "cell_number": 32,
+      "is_occupied": true,
+      "applicator_id": 34,
+      "created_at": "2026-06-08T15:23:51.451345",
+      "updated_at": "2026-06-15T18:44:11.017759"
+    },
+    {
+      "id": 33,
+      "cell_number": 33,
+      "is_occupied": true,
+      "applicator_id": 35,
+      "created_at": "2026-06-08T15:23:51.452939",
+      "updated_at": "2026-06-15T18:44:11.028287"
+    },
+    {
+      "id": 34,
+      "cell_number": 34,
+      "is_occupied": true,
+      "applicator_id": 36,
+      "created_at": "2026-06-08T15:23:51.454758",
+      "updated_at": "2026-06-15T18:44:11.039548"
+    },
+    {
+      "id": 35,
+      "cell_number": 35,
+      "is_occupied": true,
+      "applicator_id": 37,
+      "created_at": "2026-06-08T15:23:51.456440",
+      "updated_at": "2026-06-15T18:44:11.049666"
+    },
+    {
+      "id": 36,
+      "cell_number": 36,
+      "is_occupied": true,
+      "applicator_id": 38,
+      "created_at": "2026-06-08T15:23:51.457769",
+      "updated_at": "2026-06-15T18:44:11.060393"
+    },
+    {
+      "id": 37,
+      "cell_number": 37,
+      "is_occupied": true,
+      "applicator_id": 39,
+      "created_at": "2026-06-08T15:23:51.459333",
+      "updated_at": "2026-06-15T18:44:11.070341"
+    },
+    {
+      "id": 38,
+      "cell_number": 38,
+      "is_occupied": true,
+      "applicator_id": 40,
+      "created_at": "2026-06-08T15:23:51.460502",
+      "updated_at": "2026-06-15T18:44:11.079678"
+    },
+    {
+      "id": 39,
+      "cell_number": 39,
+      "is_occupied": true,
+      "applicator_id": 41,
+      "created_at": "2026-06-08T15:23:51.461651",
+      "updated_at": "2026-06-15T18:44:11.089542"
+    },
+    {
+      "id": 40,
+      "cell_number": 40,
+      "is_occupied": true,
+      "applicator_id": 42,
+      "created_at": "2026-06-08T15:23:51.462787",
+      "updated_at": "2026-06-15T18:44:11.099807"
+    },
+    {
+      "id": 41,
+      "cell_number": 41,
+      "is_occupied": true,
+      "applicator_id": 43,
+      "created_at": "2026-06-08T15:23:51.463951",
+      "updated_at": "2026-06-15T18:44:11.111509"
+    },
+    {
+      "id": 42,
+      "cell_number": 42,
+      "is_occupied": true,
+      "applicator_id": 44,
+      "created_at": "2026-06-08T15:23:51.465124",
+      "updated_at": "2026-06-15T18:44:11.123427"
+    },
+    {
+      "id": 43,
+      "cell_number": 43,
+      "is_occupied": true,
+      "applicator_id": 45,
+      "created_at": "2026-06-08T15:23:51.466281",
+      "updated_at": "2026-06-15T18:44:11.134716"
+    },
+    {
+      "id": 44,
+      "cell_number": 44,
+      "is_occupied": true,
+      "applicator_id": 46,
+      "created_at": "2026-06-08T15:23:51.467514",
+      "updated_at": "2026-06-15T18:44:11.144094"
+    },
+    {
+      "id": 45,
+      "cell_number": 45,
+      "is_occupied": true,
+      "applicator_id": 47,
+      "created_at": "2026-06-08T15:23:51.468692",
+      "updated_at": "2026-06-15T18:44:11.154189"
+    },
+    {
+      "id": 46,
+      "cell_number": 46,
+      "is_occupied": true,
+      "applicator_id": 48,
+      "created_at": "2026-06-08T15:23:51.470218",
+      "updated_at": "2026-06-15T18:44:11.165306"
+    },
+    {
+      "id": 47,
+      "cell_number": 47,
+      "is_occupied": true,
+      "applicator_id": 49,
+      "created_at": "2026-06-08T15:23:51.471798",
+      "updated_at": "2026-06-15T18:44:11.175154"
+    },
+    {
+      "id": 48,
+      "cell_number": 48,
+      "is_occupied": true,
+      "applicator_id": 50,
+      "created_at": "2026-06-08T15:23:51.473319",
+      "updated_at": "2026-06-15T18:44:11.186548"
+    },
+    {
+      "id": 49,
+      "cell_number": 49,
+      "is_occupied": true,
+      "applicator_id": 51,
+      "created_at": "2026-06-08T15:23:51.474800",
+      "updated_at": "2026-06-15T18:44:11.197452"
+    },
+    {
+      "id": 50,
+      "cell_number": 50,
+      "is_occupied": true,
+      "applicator_id": 52,
+      "created_at": "2026-06-08T15:23:51.476174",
+      "updated_at": "2026-06-15T18:44:11.207618"
+    },
+    {
+      "id": 51,
+      "cell_number": 51,
+      "is_occupied": true,
+      "applicator_id": 53,
+      "created_at": "2026-06-08T15:23:51.477437",
+      "updated_at": "2026-06-15T18:44:11.216991"
+    },
+    {
+      "id": 52,
+      "cell_number": 52,
+      "is_occupied": true,
+      "applicator_id": 54,
+      "created_at": "2026-06-08T15:23:51.478692",
+      "updated_at": "2026-06-15T18:44:11.226574"
+    },
+    {
+      "id": 53,
+      "cell_number": 53,
+      "is_occupied": true,
+      "applicator_id": 55,
+      "created_at": "2026-06-08T15:23:51.480268",
+      "updated_at": "2026-06-15T18:44:11.235862"
+    },
+    {
+      "id": 54,
+      "cell_number": 54,
+      "is_occupied": true,
+      "applicator_id": 56,
+      "created_at": "2026-06-08T15:23:51.481834",
+      "updated_at": "2026-06-15T18:44:11.245146"
+    },
+    {
+      "id": 55,
+      "cell_number": 55,
+      "is_occupied": true,
+      "applicator_id": 57,
+      "created_at": "2026-06-08T15:23:51.483402",
+      "updated_at": "2026-06-15T18:44:11.254605"
+    },
+    {
+      "id": 56,
+      "cell_number": 56,
+      "is_occupied": true,
+      "applicator_id": 58,
+      "created_at": "2026-06-08T15:23:51.484726",
+      "updated_at": "2026-06-15T18:44:11.264286"
+    },
+    {
+      "id": 57,
+      "cell_number": 57,
+      "is_occupied": true,
+      "applicator_id": 59,
+      "created_at": "2026-06-08T15:23:51.486069",
+      "updated_at": "2026-06-15T18:44:11.274456"
+    },
+    {
+      "id": 58,
+      "cell_number": 58,
+      "is_occupied": true,
+      "applicator_id": 60,
+      "created_at": "2026-06-08T15:23:51.487423",
+      "updated_at": "2026-06-15T18:44:11.285941"
+    },
+    {
+      "id": 59,
+      "cell_number": 59,
+      "is_occupied": true,
+      "applicator_id": 91,
+      "created_at": "2026-06-08T15:23:51.488804",
+      "updated_at": "2026-06-15T18:44:11.298652"
+    },
+    {
+      "id": 60,
+      "cell_number": 60,
+      "is_occupied": true,
+      "applicator_id": 101,
+      "created_at": "2026-06-08T15:23:51.490579",
+      "updated_at": "2026-06-15T18:44:11.310053"
+    },
+    {
+      "id": 61,
+      "cell_number": 61,
+      "is_occupied": true,
+      "applicator_id": 102,
+      "created_at": "2026-06-08T15:23:51.492204",
+      "updated_at": "2026-06-15T18:44:11.321828"
+    },
+    {
+      "id": 62,
+      "cell_number": 62,
+      "is_occupied": true,
+      "applicator_id": 103,
+      "created_at": "2026-06-08T15:23:51.493770",
+      "updated_at": "2026-06-15T18:44:11.335612"
+    },
+    {
+      "id": 63,
+      "cell_number": 63,
+      "is_occupied": true,
+      "applicator_id": 104,
+      "created_at": "2026-06-08T15:23:51.495121",
+      "updated_at": "2026-06-15T18:44:11.352312"
+    },
+    {
+      "id": 64,
+      "cell_number": 64,
+      "is_occupied": true,
+      "applicator_id": 105,
+      "created_at": "2026-06-08T15:23:51.496483",
+      "updated_at": "2026-06-15T18:44:11.370087"
+    },
+    {
+      "id": 65,
+      "cell_number": 65,
+      "is_occupied": true,
+      "applicator_id": 106,
+      "created_at": "2026-06-08T15:23:51.497893",
+      "updated_at": "2026-06-15T18:44:11.391610"
+    },
+    {
+      "id": 66,
+      "cell_number": 66,
+      "is_occupied": true,
+      "applicator_id": 107,
+      "created_at": "2026-06-08T15:23:51.499281",
+      "updated_at": "2026-06-15T18:44:11.411200"
+    },
+    {
+      "id": 67,
+      "cell_number": 67,
+      "is_occupied": true,
+      "applicator_id": 108,
+      "created_at": "2026-06-08T15:23:51.500732",
+      "updated_at": "2026-06-15T18:44:11.429218"
+    },
+    {
+      "id": 68,
+      "cell_number": 68,
+      "is_occupied": true,
+      "applicator_id": 109,
+      "created_at": "2026-06-08T15:23:51.502379",
+      "updated_at": "2026-06-15T18:44:11.446660"
+    },
+    {
+      "id": 69,
+      "cell_number": 69,
+      "is_occupied": true,
+      "applicator_id": 110,
+      "created_at": "2026-06-08T15:23:51.503800",
+      "updated_at": "2026-06-15T18:44:11.459657"
+    },
+    {
+      "id": 70,
+      "cell_number": 70,
+      "is_occupied": true,
+      "applicator_id": 111,
+      "created_at": "2026-06-08T15:23:51.505487",
+      "updated_at": "2026-06-15T18:44:11.475615"
+    },
+    {
+      "id": 71,
+      "cell_number": 71,
+      "is_occupied": true,
+      "applicator_id": 112,
+      "created_at": "2026-06-08T15:23:51.507248",
+      "updated_at": "2026-06-15T18:44:11.489049"
+    },
+    {
+      "id": 72,
+      "cell_number": 72,
+      "is_occupied": true,
+      "applicator_id": 113,
+      "created_at": "2026-06-08T15:23:51.509055",
+      "updated_at": "2026-06-15T18:44:11.502622"
+    },
+    {
+      "id": 73,
+      "cell_number": 73,
+      "is_occupied": true,
+      "applicator_id": 114,
+      "created_at": "2026-06-08T15:23:51.510640",
+      "updated_at": "2026-06-15T18:44:11.516687"
+    },
+    {
+      "id": 74,
+      "cell_number": 74,
+      "is_occupied": true,
+      "applicator_id": 115,
+      "created_at": "2026-06-08T15:23:51.512095",
+      "updated_at": "2026-06-15T18:44:11.531176"
+    },
+    {
+      "id": 75,
+      "cell_number": 75,
+      "is_occupied": true,
+      "applicator_id": 116,
+      "created_at": "2026-06-08T15:23:51.513597",
+      "updated_at": "2026-06-15T18:44:11.543995"
+    },
+    {
+      "id": 76,
+      "cell_number": 76,
+      "is_occupied": true,
+      "applicator_id": 117,
+      "created_at": "2026-06-08T15:23:51.515112",
+      "updated_at": "2026-06-15T18:44:11.556142"
+    },
+    {
+      "id": 77,
+      "cell_number": 77,
+      "is_occupied": true,
+      "applicator_id": 118,
+      "created_at": "2026-06-08T15:23:51.516629",
+      "updated_at": "2026-06-15T18:44:11.569325"
+    },
+    {
+      "id": 78,
+      "cell_number": 78,
+      "is_occupied": true,
+      "applicator_id": 119,
+      "created_at": "2026-06-08T15:23:51.518132",
+      "updated_at": "2026-06-15T18:44:11.579987"
+    },
+    {
+      "id": 79,
+      "cell_number": 79,
+      "is_occupied": true,
+      "applicator_id": 120,
+      "created_at": "2026-06-08T15:23:51.519663",
+      "updated_at": "2026-06-15T18:44:11.590711"
+    },
+    {
+      "id": 80,
+      "cell_number": 80,
+      "is_occupied": true,
+      "applicator_id": 121,
+      "created_at": "2026-06-08T15:23:51.521170",
+      "updated_at": "2026-06-15T18:44:11.602201"
+    },
+    {
+      "id": 81,
+      "cell_number": 81,
+      "is_occupied": true,
+      "applicator_id": 122,
+      "created_at": "2026-06-08T15:23:51.523059",
+      "updated_at": "2026-06-15T18:44:11.612441"
+    },
+    {
+      "id": 82,
+      "cell_number": 82,
+      "is_occupied": true,
+      "applicator_id": 123,
+      "created_at": "2026-06-08T15:23:51.524700",
+      "updated_at": "2026-06-15T18:44:11.622540"
+    },
+    {
+      "id": 83,
+      "cell_number": 83,
+      "is_occupied": true,
+      "applicator_id": 124,
+      "created_at": "2026-06-08T15:23:51.526251",
+      "updated_at": "2026-06-15T18:44:11.632296"
+    },
+    {
+      "id": 84,
+      "cell_number": 84,
+      "is_occupied": true,
+      "applicator_id": 125,
+      "created_at": "2026-06-08T15:23:51.527786",
+      "updated_at": "2026-06-15T18:44:11.642284"
+    },
+    {
+      "id": 85,
+      "cell_number": 85,
+      "is_occupied": true,
+      "applicator_id": 126,
+      "created_at": "2026-06-08T15:23:51.529299",
+      "updated_at": "2026-06-15T18:44:11.651962"
+    },
+    {
+      "id": 86,
+      "cell_number": 86,
+      "is_occupied": true,
+      "applicator_id": 127,
+      "created_at": "2026-06-08T15:23:51.530854",
+      "updated_at": "2026-06-15T18:44:11.661450"
+    },
+    {
+      "id": 87,
+      "cell_number": 87,
+      "is_occupied": true,
+      "applicator_id": 128,
+      "created_at": "2026-06-08T15:23:51.532418",
+      "updated_at": "2026-06-15T18:44:11.670914"
+    },
+    {
+      "id": 88,
+      "cell_number": 88,
+      "is_occupied": true,
+      "applicator_id": 129,
+      "created_at": "2026-06-08T15:23:51.533986",
+      "updated_at": "2026-06-15T18:44:11.680311"
+    },
+    {
+      "id": 89,
+      "cell_number": 89,
+      "is_occupied": true,
+      "applicator_id": 130,
+      "created_at": "2026-06-08T15:23:51.535544",
+      "updated_at": "2026-06-15T18:44:11.691598"
+    },
+    {
+      "id": 90,
+      "cell_number": 90,
+      "is_occupied": true,
+      "applicator_id": 131,
+      "created_at": "2026-06-08T15:23:51.537106",
+      "updated_at": "2026-06-15T18:44:11.701317"
+    },
+    {
+      "id": 91,
+      "cell_number": 91,
+      "is_occupied": true,
+      "applicator_id": 132,
+      "created_at": "2026-06-08T15:23:51.538711",
+      "updated_at": "2026-06-15T18:44:11.711335"
+    },
+    {
+      "id": 92,
+      "cell_number": 92,
+      "is_occupied": true,
+      "applicator_id": 133,
+      "created_at": "2026-06-08T15:23:51.540493",
+      "updated_at": "2026-06-15T18:44:11.721484"
+    },
+    {
+      "id": 93,
+      "cell_number": 93,
+      "is_occupied": true,
+      "applicator_id": 134,
+      "created_at": "2026-06-08T15:23:51.542122",
+      "updated_at": "2026-06-15T18:44:11.732207"
+    },
+    {
+      "id": 94,
+      "cell_number": 94,
+      "is_occupied": true,
+      "applicator_id": 135,
+      "created_at": "2026-06-08T15:23:51.543735",
+      "updated_at": "2026-06-15T18:44:11.743296"
+    },
+    {
+      "id": 95,
+      "cell_number": 95,
+      "is_occupied": true,
+      "applicator_id": 136,
+      "created_at": "2026-06-08T15:23:51.545335",
+      "updated_at": "2026-06-15T18:44:11.754033"
+    },
+    {
+      "id": 96,
+      "cell_number": 96,
+      "is_occupied": true,
+      "applicator_id": 137,
+      "created_at": "2026-06-08T15:23:51.546961",
+      "updated_at": "2026-06-15T18:44:11.764277"
+    },
+    {
+      "id": 97,
+      "cell_number": 97,
+      "is_occupied": true,
+      "applicator_id": 138,
+      "created_at": "2026-06-08T15:23:51.548617",
+      "updated_at": "2026-06-15T18:44:11.775412"
+    },
+    {
+      "id": 98,
+      "cell_number": 98,
+      "is_occupied": true,
+      "applicator_id": 139,
+      "created_at": "2026-06-08T15:23:51.550252",
+      "updated_at": "2026-06-15T18:44:11.788426"
+    },
+    {
+      "id": 99,
+      "cell_number": 99,
+      "is_occupied": true,
+      "applicator_id": 140,
+      "created_at": "2026-06-08T15:23:51.551907",
+      "updated_at": "2026-06-15T18:44:11.800682"
+    },
+    {
+      "id": 100,
+      "cell_number": 100,
+      "is_occupied": true,
+      "applicator_id": 141,
+      "created_at": "2026-06-08T15:23:51.553680",
+      "updated_at": "2026-06-15T18:44:11.812540"
+    },
+    {
+      "id": 101,
+      "cell_number": 101,
+      "is_occupied": true,
+      "applicator_id": 142,
+      "created_at": "2026-06-08T15:23:51.558110",
+      "updated_at": "2026-06-15T18:44:11.823548"
+    },
+    {
+      "id": 102,
+      "cell_number": 102,
+      "is_occupied": true,
+      "applicator_id": 143,
+      "created_at": "2026-06-08T15:23:51.559849",
+      "updated_at": "2026-06-15T18:44:11.835979"
+    },
+    {
+      "id": 103,
+      "cell_number": 103,
+      "is_occupied": true,
+      "applicator_id": 144,
+      "created_at": "2026-06-08T15:23:51.561553",
+      "updated_at": "2026-06-15T18:44:11.846152"
+    },
+    {
+      "id": 104,
+      "cell_number": 104,
+      "is_occupied": true,
+      "applicator_id": 145,
+      "created_at": "2026-06-08T15:23:51.563278",
+      "updated_at": "2026-06-15T18:44:11.857077"
+    },
+    {
+      "id": 105,
+      "cell_number": 105,
+      "is_occupied": true,
+      "applicator_id": 146,
+      "created_at": "2026-06-08T15:23:51.565025",
+      "updated_at": "2026-06-15T18:44:11.871359"
+    },
+    {
+      "id": 106,
+      "cell_number": 106,
+      "is_occupied": true,
+      "applicator_id": 147,
+      "created_at": "2026-06-08T15:23:51.566764",
+      "updated_at": "2026-06-15T18:44:11.882717"
+    },
+    {
+      "id": 107,
+      "cell_number": 107,
+      "is_occupied": true,
+      "applicator_id": 148,
+      "created_at": "2026-06-08T15:23:51.568599",
+      "updated_at": "2026-06-15T18:44:11.891869"
+    },
+    {
+      "id": 108,
+      "cell_number": 108,
+      "is_occupied": true,
+      "applicator_id": 149,
+      "created_at": "2026-06-08T15:23:51.570335",
+      "updated_at": "2026-06-15T18:44:11.903132"
+    },
+    {
+      "id": 109,
+      "cell_number": 109,
+      "is_occupied": true,
+      "applicator_id": 150,
+      "created_at": "2026-06-08T15:23:51.571993",
+      "updated_at": "2026-06-15T18:44:11.914724"
+    },
+    {
+      "id": 110,
+      "cell_number": 110,
+      "is_occupied": true,
+      "applicator_id": 151,
+      "created_at": "2026-06-08T15:23:51.573621",
+      "updated_at": "2026-06-15T18:44:11.924065"
+    },
+    {
+      "id": 111,
+      "cell_number": 111,
+      "is_occupied": true,
+      "applicator_id": 152,
+      "created_at": "2026-06-08T15:23:51.575157",
+      "updated_at": "2026-06-15T18:44:11.936162"
+    },
+    {
+      "id": 112,
+      "cell_number": 112,
+      "is_occupied": true,
+      "applicator_id": 153,
+      "created_at": "2026-06-08T15:23:51.576751",
+      "updated_at": "2026-06-15T18:44:11.947963"
+    },
+    {
+      "id": 113,
+      "cell_number": 113,
+      "is_occupied": true,
+      "applicator_id": 154,
+      "created_at": "2026-06-08T15:23:51.578288",
+      "updated_at": "2026-06-15T18:44:11.958771"
+    },
+    {
+      "id": 114,
+      "cell_number": 114,
+      "is_occupied": true,
+      "applicator_id": 155,
+      "created_at": "2026-06-08T15:23:51.579855",
+      "updated_at": "2026-06-15T18:44:11.970291"
+    },
+    {
+      "id": 115,
+      "cell_number": 115,
+      "is_occupied": true,
+      "applicator_id": 156,
+      "created_at": "2026-06-08T15:23:51.581401",
+      "updated_at": "2026-06-15T18:44:11.982051"
+    },
+    {
+      "id": 116,
+      "cell_number": 116,
+      "is_occupied": true,
+      "applicator_id": 157,
+      "created_at": "2026-06-08T15:23:51.583041",
+      "updated_at": "2026-06-15T18:44:11.993871"
+    },
+    {
+      "id": 117,
+      "cell_number": 117,
+      "is_occupied": true,
+      "applicator_id": 158,
+      "created_at": "2026-06-08T15:23:51.584630",
+      "updated_at": "2026-06-15T18:44:12.005062"
+    },
+    {
+      "id": 118,
+      "cell_number": 118,
+      "is_occupied": true,
+      "applicator_id": 159,
+      "created_at": "2026-06-08T15:23:51.586196",
+      "updated_at": "2026-06-15T18:44:12.017667"
+    },
+    {
+      "id": 119,
+      "cell_number": 119,
+      "is_occupied": true,
+      "applicator_id": 160,
+      "created_at": "2026-06-08T15:23:51.587760",
+      "updated_at": "2026-06-15T18:44:12.029157"
+    },
+    {
+      "id": 120,
+      "cell_number": 120,
+      "is_occupied": true,
+      "applicator_id": 201,
+      "created_at": "2026-06-08T15:23:51.589833",
+      "updated_at": "2026-06-15T18:44:12.040020"
+    },
+    {
+      "id": 121,
+      "cell_number": 121,
+      "is_occupied": true,
+      "applicator_id": 202,
+      "created_at": "2026-06-08T15:23:51.591899",
+      "updated_at": "2026-06-15T18:44:12.051266"
+    },
+    {
+      "id": 122,
+      "cell_number": 122,
+      "is_occupied": true,
+      "applicator_id": 203,
+      "created_at": "2026-06-08T15:23:51.593760",
+      "updated_at": "2026-06-15T18:44:12.061972"
+    },
+    {
+      "id": 123,
+      "cell_number": 123,
+      "is_occupied": true,
+      "applicator_id": 204,
+      "created_at": "2026-06-08T15:23:51.595607",
+      "updated_at": "2026-06-15T18:44:12.072294"
+    },
+    {
+      "id": 124,
+      "cell_number": 124,
+      "is_occupied": true,
+      "applicator_id": 205,
+      "created_at": "2026-06-08T15:23:51.597487",
+      "updated_at": "2026-06-15T18:44:12.083490"
+    },
+    {
+      "id": 125,
+      "cell_number": 125,
+      "is_occupied": true,
+      "applicator_id": 206,
+      "created_at": "2026-06-08T15:23:51.599361",
+      "updated_at": "2026-06-15T18:44:12.095245"
+    },
+    {
+      "id": 126,
+      "cell_number": 126,
+      "is_occupied": true,
+      "applicator_id": 207,
+      "created_at": "2026-06-08T15:23:51.601205",
+      "updated_at": "2026-06-15T18:44:12.110780"
+    },
+    {
+      "id": 127,
+      "cell_number": 127,
+      "is_occupied": true,
+      "applicator_id": 208,
+      "created_at": "2026-06-08T15:23:51.603221",
+      "updated_at": "2026-06-15T18:44:12.126557"
+    },
+    {
+      "id": 128,
+      "cell_number": 128,
+      "is_occupied": true,
+      "applicator_id": 209,
+      "created_at": "2026-06-08T15:23:51.605108",
+      "updated_at": "2026-06-15T18:44:12.143101"
+    },
+    {
+      "id": 129,
+      "cell_number": 129,
+      "is_occupied": true,
+      "applicator_id": 210,
+      "created_at": "2026-06-08T15:23:51.607026",
+      "updated_at": "2026-06-15T18:44:12.160704"
+    },
+    {
+      "id": 130,
+      "cell_number": 130,
+      "is_occupied": true,
+      "applicator_id": 211,
+      "created_at": "2026-06-08T15:23:51.608886",
+      "updated_at": "2026-06-15T18:44:12.175230"
+    },
+    {
+      "id": 131,
+      "cell_number": 131,
+      "is_occupied": true,
+      "applicator_id": 212,
+      "created_at": "2026-06-08T15:23:51.610756",
+      "updated_at": "2026-06-15T18:44:12.188384"
+    },
+    {
+      "id": 132,
+      "cell_number": 132,
+      "is_occupied": true,
+      "applicator_id": 213,
+      "created_at": "2026-06-08T15:23:51.612630",
+      "updated_at": "2026-06-15T18:44:12.203477"
+    },
+    {
+      "id": 133,
+      "cell_number": 133,
+      "is_occupied": true,
+      "applicator_id": 214,
+      "created_at": "2026-06-08T15:23:51.614485",
+      "updated_at": "2026-06-15T18:44:12.216424"
+    },
+    {
+      "id": 134,
+      "cell_number": 134,
+      "is_occupied": true,
+      "applicator_id": 215,
+      "created_at": "2026-06-08T15:23:51.616621",
+      "updated_at": "2026-06-15T18:44:12.231787"
+    },
+    {
+      "id": 135,
+      "cell_number": 135,
+      "is_occupied": true,
+      "applicator_id": 216,
+      "created_at": "2026-06-08T15:23:51.618526",
+      "updated_at": "2026-06-15T18:44:12.247210"
+    },
+    {
+      "id": 136,
+      "cell_number": 136,
+      "is_occupied": true,
+      "applicator_id": 217,
+      "created_at": "2026-06-08T15:23:51.620465",
+      "updated_at": "2026-06-15T18:44:12.260883"
+    },
+    {
+      "id": 137,
+      "cell_number": 137,
+      "is_occupied": true,
+      "applicator_id": 218,
+      "created_at": "2026-06-08T15:23:51.622493",
+      "updated_at": "2026-06-15T18:44:12.272711"
+    },
+    {
+      "id": 138,
+      "cell_number": 138,
+      "is_occupied": true,
+      "applicator_id": 219,
+      "created_at": "2026-06-08T15:23:51.624445",
+      "updated_at": "2026-06-15T18:44:12.289170"
+    },
+    {
+      "id": 139,
+      "cell_number": 139,
+      "is_occupied": true,
+      "applicator_id": 220,
+      "created_at": "2026-06-08T15:23:51.626379",
+      "updated_at": "2026-06-15T18:44:12.303596"
+    },
+    {
+      "id": 140,
+      "cell_number": 140,
+      "is_occupied": true,
+      "applicator_id": 221,
+      "created_at": "2026-06-08T15:23:51.628565",
+      "updated_at": "2026-06-15T18:44:12.316795"
+    },
+    {
+      "id": 141,
+      "cell_number": 141,
+      "is_occupied": true,
+      "applicator_id": 222,
+      "created_at": "2026-06-08T15:23:51.630513",
+      "updated_at": "2026-06-15T18:44:12.329687"
+    },
+    {
+      "id": 142,
+      "cell_number": 142,
+      "is_occupied": true,
+      "applicator_id": 223,
+      "created_at": "2026-06-08T15:23:51.632474",
+      "updated_at": "2026-06-15T18:44:12.342464"
+    },
+    {
+      "id": 143,
+      "cell_number": 143,
+      "is_occupied": true,
+      "applicator_id": 224,
+      "created_at": "2026-06-08T15:23:51.634652",
+      "updated_at": "2026-06-15T18:44:12.355016"
+    },
+    {
+      "id": 144,
+      "cell_number": 144,
+      "is_occupied": true,
+      "applicator_id": 225,
+      "created_at": "2026-06-08T15:23:51.636636",
+      "updated_at": "2026-06-15T18:44:12.368215"
+    },
+    {
+      "id": 145,
+      "cell_number": 145,
+      "is_occupied": true,
+      "applicator_id": 226,
+      "created_at": "2026-06-08T15:23:51.638613",
+      "updated_at": "2026-06-15T18:44:12.381331"
+    },
+    {
+      "id": 146,
+      "cell_number": 146,
+      "is_occupied": true,
+      "applicator_id": 227,
+      "created_at": "2026-06-08T15:23:51.641414",
+      "updated_at": "2026-06-15T18:44:12.391490"
+    },
+    {
+      "id": 147,
+      "cell_number": 147,
+      "is_occupied": true,
+      "applicator_id": 228,
+      "created_at": "2026-06-08T15:23:51.643753",
+      "updated_at": "2026-06-15T18:44:12.400965"
+    },
+    {
+      "id": 148,
+      "cell_number": 148,
+      "is_occupied": true,
+      "applicator_id": 229,
+      "created_at": "2026-06-08T15:23:51.645730",
+      "updated_at": "2026-06-15T18:44:12.410413"
+    },
+    {
+      "id": 149,
+      "cell_number": 149,
+      "is_occupied": true,
+      "applicator_id": 230,
+      "created_at": "2026-06-08T15:23:51.647502",
+      "updated_at": "2026-06-15T18:44:12.420288"
+    },
+    {
+      "id": 150,
+      "cell_number": 150,
+      "is_occupied": true,
+      "applicator_id": 231,
+      "created_at": "2026-06-08T15:23:51.649264",
+      "updated_at": "2026-06-15T18:44:12.430324"
+    },
+    {
+      "id": 151,
+      "cell_number": 151,
+      "is_occupied": true,
+      "applicator_id": 232,
+      "created_at": "2026-06-08T15:23:51.651069",
+      "updated_at": "2026-06-15T18:44:12.439865"
+    },
+    {
+      "id": 152,
+      "cell_number": 152,
+      "is_occupied": true,
+      "applicator_id": 233,
+      "created_at": "2026-06-08T15:23:51.652843",
+      "updated_at": "2026-06-15T18:44:12.450266"
+    },
+    {
+      "id": 153,
+      "cell_number": 153,
+      "is_occupied": true,
+      "applicator_id": 234,
+      "created_at": "2026-06-08T15:23:51.655287",
+      "updated_at": "2026-06-15T18:44:12.459671"
+    },
+    {
+      "id": 154,
+      "cell_number": 154,
+      "is_occupied": true,
+      "applicator_id": 235,
+      "created_at": "2026-06-08T15:23:51.658255",
+      "updated_at": "2026-06-15T18:44:12.469067"
+    },
+    {
+      "id": 155,
+      "cell_number": 155,
+      "is_occupied": true,
+      "applicator_id": 236,
+      "created_at": "2026-06-08T15:23:51.661181",
+      "updated_at": "2026-06-15T18:44:12.479112"
+    },
+    {
+      "id": 156,
+      "cell_number": 156,
+      "is_occupied": true,
+      "applicator_id": 237,
+      "created_at": "2026-06-08T15:23:51.663915",
+      "updated_at": "2026-06-15T18:44:12.489136"
+    },
+    {
+      "id": 157,
+      "cell_number": 157,
+      "is_occupied": true,
+      "applicator_id": 238,
+      "created_at": "2026-06-08T15:23:51.665781",
+      "updated_at": "2026-06-15T18:44:12.501515"
+    },
+    {
+      "id": 158,
+      "cell_number": 158,
+      "is_occupied": true,
+      "applicator_id": 239,
+      "created_at": "2026-06-08T15:23:51.667571",
+      "updated_at": "2026-06-15T18:44:12.513768"
+    },
+    {
+      "id": 159,
+      "cell_number": 159,
+      "is_occupied": true,
+      "applicator_id": 240,
+      "created_at": "2026-06-08T15:23:51.669352",
+      "updated_at": "2026-06-15T18:44:12.526870"
+    },
+    {
+      "id": 160,
+      "cell_number": 160,
+      "is_occupied": true,
+      "applicator_id": 241,
+      "created_at": "2026-06-08T15:23:51.671157",
+      "updated_at": "2026-06-15T18:44:12.537868"
+    },
+    {
+      "id": 161,
+      "cell_number": 161,
+      "is_occupied": true,
+      "applicator_id": 242,
+      "created_at": "2026-06-08T15:23:51.672982",
+      "updated_at": "2026-06-15T18:44:12.549594"
+    },
+    {
+      "id": 162,
+      "cell_number": 162,
+      "is_occupied": true,
+      "applicator_id": 243,
+      "created_at": "2026-06-08T15:23:51.674796",
+      "updated_at": "2026-06-15T18:44:12.565101"
+    },
+    {
+      "id": 163,
+      "cell_number": 163,
+      "is_occupied": true,
+      "applicator_id": 244,
+      "created_at": "2026-06-08T15:23:51.676605",
+      "updated_at": "2026-06-15T18:44:12.581156"
+    },
+    {
+      "id": 164,
+      "cell_number": 164,
+      "is_occupied": true,
+      "applicator_id": 245,
+      "created_at": "2026-06-08T15:23:51.678445",
+      "updated_at": "2026-06-15T18:44:12.598293"
+    },
+    {
+      "id": 165,
+      "cell_number": 165,
+      "is_occupied": true,
+      "applicator_id": 246,
+      "created_at": "2026-06-08T15:23:51.680257",
+      "updated_at": "2026-06-15T18:44:12.615092"
+    },
+    {
+      "id": 166,
+      "cell_number": 166,
+      "is_occupied": true,
+      "applicator_id": 247,
+      "created_at": "2026-06-08T15:23:51.682258",
+      "updated_at": "2026-06-15T18:44:12.631726"
+    },
+    {
+      "id": 167,
+      "cell_number": 167,
+      "is_occupied": true,
+      "applicator_id": 248,
+      "created_at": "2026-06-08T15:23:51.684089",
+      "updated_at": "2026-06-15T18:44:12.645480"
+    },
+    {
+      "id": 168,
+      "cell_number": 168,
+      "is_occupied": true,
+      "applicator_id": 249,
+      "created_at": "2026-06-08T15:23:51.685978",
+      "updated_at": "2026-06-15T18:44:12.659191"
+    },
+    {
+      "id": 169,
+      "cell_number": 169,
+      "is_occupied": true,
+      "applicator_id": 250,
+      "created_at": "2026-06-08T15:23:51.687825",
+      "updated_at": "2026-06-15T18:44:12.676240"
+    },
+    {
+      "id": 170,
+      "cell_number": 170,
+      "is_occupied": true,
+      "applicator_id": 251,
+      "created_at": "2026-06-08T15:23:51.689750",
+      "updated_at": "2026-06-15T18:44:12.693262"
+    },
+    {
+      "id": 171,
+      "cell_number": 171,
+      "is_occupied": true,
+      "applicator_id": 252,
+      "created_at": "2026-06-08T15:23:51.691636",
+      "updated_at": "2026-06-15T18:44:12.714333"
+    },
+    {
+      "id": 172,
+      "cell_number": 172,
+      "is_occupied": true,
+      "applicator_id": 253,
+      "created_at": "2026-06-08T15:23:51.693493",
+      "updated_at": "2026-06-15T18:44:12.728401"
+    },
+    {
+      "id": 173,
+      "cell_number": 173,
+      "is_occupied": true,
+      "applicator_id": 254,
+      "created_at": "2026-06-08T15:23:51.695353",
+      "updated_at": "2026-06-15T18:44:12.743431"
+    },
+    {
+      "id": 174,
+      "cell_number": 174,
+      "is_occupied": true,
+      "applicator_id": 255,
+      "created_at": "2026-06-08T15:23:51.697272",
+      "updated_at": "2026-06-15T18:44:12.758491"
+    },
+    {
+      "id": 175,
+      "cell_number": 175,
+      "is_occupied": true,
+      "applicator_id": 256,
+      "created_at": "2026-06-08T15:23:51.699202",
+      "updated_at": "2026-06-15T18:44:12.771417"
+    },
+    {
+      "id": 176,
+      "cell_number": 176,
+      "is_occupied": true,
+      "applicator_id": 257,
+      "created_at": "2026-06-08T15:23:51.701101",
+      "updated_at": "2026-06-15T18:44:12.783625"
+    },
+    {
+      "id": 177,
+      "cell_number": 177,
+      "is_occupied": true,
+      "applicator_id": 258,
+      "created_at": "2026-06-08T15:23:51.702999",
+      "updated_at": "2026-06-15T18:44:12.795734"
+    },
+    {
+      "id": 178,
+      "cell_number": 178,
+      "is_occupied": true,
+      "applicator_id": 259,
+      "created_at": "2026-06-08T15:23:51.704895",
+      "updated_at": "2026-06-15T18:44:12.806785"
+    },
+    {
+      "id": 179,
+      "cell_number": 179,
+      "is_occupied": true,
+      "applicator_id": 260,
+      "created_at": "2026-06-08T15:23:51.708498",
+      "updated_at": "2026-06-15T18:44:12.817152"
+    },
+    {
+      "id": 180,
+      "cell_number": 180,
+      "is_occupied": true,
+      "applicator_id": 305,
+      "created_at": "2026-06-08T15:23:51.711570",
+      "updated_at": "2026-06-17T05:29:35.512189"
+    },
+    {
+      "id": 181,
+      "cell_number": 181,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.714031"
+    },
+    {
+      "id": 182,
+      "cell_number": 182,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.717446"
+    },
+    {
+      "id": 183,
+      "cell_number": 183,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.720078"
+    },
+    {
+      "id": 184,
+      "cell_number": 184,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.722518"
+    },
+    {
+      "id": 185,
+      "cell_number": 185,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.725056"
+    },
+    {
+      "id": 186,
+      "cell_number": 186,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.727607"
+    },
+    {
+      "id": 187,
+      "cell_number": 187,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.730008"
+    },
+    {
+      "id": 188,
+      "cell_number": 188,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.732609"
+    },
+    {
+      "id": 189,
+      "cell_number": 189,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.735010"
+    },
+    {
+      "id": 190,
+      "cell_number": 190,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.737452"
+    },
+    {
+      "id": 191,
+      "cell_number": 191,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.740117"
+    },
+    {
+      "id": 192,
+      "cell_number": 192,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.743348"
+    },
+    {
+      "id": 193,
+      "cell_number": 193,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.745919"
+    },
+    {
+      "id": 194,
+      "cell_number": 194,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.748346"
+    },
+    {
+      "id": 195,
+      "cell_number": 195,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.750896"
+    },
+    {
+      "id": 196,
+      "cell_number": 196,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.753443"
+    },
+    {
+      "id": 197,
+      "cell_number": 197,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.756117"
+    },
+    {
+      "id": 198,
+      "cell_number": 198,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.759144"
+    },
+    {
+      "id": 199,
+      "cell_number": 199,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.761336"
+    },
+    {
+      "id": 200,
+      "cell_number": 200,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.763473"
+    },
+    {
+      "id": 201,
+      "cell_number": 201,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.765611"
+    },
+    {
+      "id": 202,
+      "cell_number": 202,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.767721"
+    },
+    {
+      "id": 203,
+      "cell_number": 203,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.769826"
+    },
+    {
+      "id": 204,
+      "cell_number": 204,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.772973"
+    },
+    {
+      "id": 205,
+      "cell_number": 205,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.776160"
+    },
+    {
+      "id": 206,
+      "cell_number": 206,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.778660"
+    },
+    {
+      "id": 207,
+      "cell_number": 207,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.781247"
+    },
+    {
+      "id": 208,
+      "cell_number": 208,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.783796"
+    },
+    {
+      "id": 209,
+      "cell_number": 209,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.786382"
+    },
+    {
+      "id": 210,
+      "cell_number": 210,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.788963"
+    },
+    {
+      "id": 211,
+      "cell_number": 211,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.791540"
+    },
+    {
+      "id": 212,
+      "cell_number": 212,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.794140"
+    },
+    {
+      "id": 213,
+      "cell_number": 213,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.796707"
+    },
+    {
+      "id": 214,
+      "cell_number": 214,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.799320"
+    },
+    {
+      "id": 215,
+      "cell_number": 215,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.801981"
+    },
+    {
+      "id": 216,
+      "cell_number": 216,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.804952"
+    },
+    {
+      "id": 217,
+      "cell_number": 217,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.807785"
+    },
+    {
+      "id": 218,
+      "cell_number": 218,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.810478"
+    },
+    {
+      "id": 219,
+      "cell_number": 219,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.813180"
+    },
+    {
+      "id": 220,
+      "cell_number": 220,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.815853"
+    },
+    {
+      "id": 221,
+      "cell_number": 221,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.818520"
+    },
+    {
+      "id": 222,
+      "cell_number": 222,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.821280"
+    },
+    {
+      "id": 223,
+      "cell_number": 223,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.823680"
+    },
+    {
+      "id": 224,
+      "cell_number": 224,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.826013"
+    },
+    {
+      "id": 225,
+      "cell_number": 225,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.828269"
+    },
+    {
+      "id": 226,
+      "cell_number": 226,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.830542"
+    },
+    {
+      "id": 227,
+      "cell_number": 227,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.832808"
+    },
+    {
+      "id": 228,
+      "cell_number": 228,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.835058"
+    },
+    {
+      "id": 229,
+      "cell_number": 229,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.837477"
+    },
+    {
+      "id": 230,
+      "cell_number": 230,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.840354"
+    },
+    {
+      "id": 231,
+      "cell_number": 231,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.843119"
+    },
+    {
+      "id": 232,
+      "cell_number": 232,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.845930"
+    },
+    {
+      "id": 233,
+      "cell_number": 233,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.848739"
+    },
+    {
+      "id": 234,
+      "cell_number": 234,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.851509"
+    },
+    {
+      "id": 235,
+      "cell_number": 235,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.854265"
+    },
+    {
+      "id": 236,
+      "cell_number": 236,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.857077"
+    },
+    {
+      "id": 237,
+      "cell_number": 237,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.859899"
+    },
+    {
+      "id": 238,
+      "cell_number": 238,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.862718"
+    },
+    {
+      "id": 239,
+      "cell_number": 239,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.865544"
+    },
+    {
+      "id": 240,
+      "cell_number": 240,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.868430"
+    },
+    {
+      "id": 241,
+      "cell_number": 241,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.871360"
+    },
+    {
+      "id": 242,
+      "cell_number": 242,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.874958"
+    },
+    {
+      "id": 243,
+      "cell_number": 243,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.878090"
+    },
+    {
+      "id": 244,
+      "cell_number": 244,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.880939"
+    },
+    {
+      "id": 245,
+      "cell_number": 245,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.883833"
+    },
+    {
+      "id": 246,
+      "cell_number": 246,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.886730"
+    },
+    {
+      "id": 247,
+      "cell_number": 247,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.890517"
+    },
+    {
+      "id": 248,
+      "cell_number": 248,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.893863"
+    },
+    {
+      "id": 249,
+      "cell_number": 249,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.896810"
+    },
+    {
+      "id": 250,
+      "cell_number": 250,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.899750"
+    },
+    {
+      "id": 251,
+      "cell_number": 251,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.902683"
+    },
+    {
+      "id": 252,
+      "cell_number": 252,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.905801"
+    },
+    {
+      "id": 253,
+      "cell_number": 253,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.908811"
+    },
+    {
+      "id": 254,
+      "cell_number": 254,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.911785"
+    },
+    {
+      "id": 255,
+      "cell_number": 255,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.914718"
+    },
+    {
+      "id": 256,
+      "cell_number": 256,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.917665"
+    },
+    {
+      "id": 257,
+      "cell_number": 257,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.920832"
+    },
+    {
+      "id": 258,
+      "cell_number": 258,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.924360"
+    },
+    {
+      "id": 259,
+      "cell_number": 259,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.927358"
+    },
+    {
+      "id": 260,
+      "cell_number": 260,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.930618"
+    },
+    {
+      "id": 261,
+      "cell_number": 261,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.933621"
+    },
+    {
+      "id": 262,
+      "cell_number": 262,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.936647"
+    },
+    {
+      "id": 263,
+      "cell_number": 263,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.939723"
+    },
+    {
+      "id": 264,
+      "cell_number": 264,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.942374"
+    },
+    {
+      "id": 265,
+      "cell_number": 265,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.944900"
+    },
+    {
+      "id": 266,
+      "cell_number": 266,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.947529"
+    },
+    {
+      "id": 267,
+      "cell_number": 267,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.950071"
+    },
+    {
+      "id": 268,
+      "cell_number": 268,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.952592"
+    },
+    {
+      "id": 269,
+      "cell_number": 269,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.955523"
+    },
+    {
+      "id": 270,
+      "cell_number": 270,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.958699"
+    },
+    {
+      "id": 271,
+      "cell_number": 271,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.961831"
+    },
+    {
+      "id": 272,
+      "cell_number": 272,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.965200"
+    },
+    {
+      "id": 273,
+      "cell_number": 273,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.968327"
+    },
+    {
+      "id": 274,
+      "cell_number": 274,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.971030"
+    },
+    {
+      "id": 275,
+      "cell_number": 275,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.973823"
+    },
+    {
+      "id": 276,
+      "cell_number": 276,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.976829"
+    },
+    {
+      "id": 277,
+      "cell_number": 277,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.979461"
+    },
+    {
+      "id": 278,
+      "cell_number": 278,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.982122"
+    },
+    {
+      "id": 279,
+      "cell_number": 279,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.985214"
+    },
+    {
+      "id": 280,
+      "cell_number": 280,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.988694"
+    },
+    {
+      "id": 281,
+      "cell_number": 281,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.991959"
+    },
+    {
+      "id": 282,
+      "cell_number": 282,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.995274"
+    },
+    {
+      "id": 283,
+      "cell_number": 283,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:51.998712"
+    },
+    {
+      "id": 284,
+      "cell_number": 284,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:52.001974"
+    },
+    {
+      "id": 285,
+      "cell_number": 285,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:52.005319"
+    },
+    {
+      "id": 286,
+      "cell_number": 286,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:52.008877"
+    },
+    {
+      "id": 287,
+      "cell_number": 287,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:52.012301"
+    },
+    {
+      "id": 288,
+      "cell_number": 288,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:52.015638"
+    },
+    {
+      "id": 289,
+      "cell_number": 289,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:52.019112"
+    },
+    {
+      "id": 290,
+      "cell_number": 290,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:52.032140"
+    },
+    {
+      "id": 291,
+      "cell_number": 291,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:52.037304"
+    },
+    {
+      "id": 292,
+      "cell_number": 292,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:52.069369"
+    },
+    {
+      "id": 293,
+      "cell_number": 293,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:52.078489"
+    },
+    {
+      "id": 294,
+      "cell_number": 294,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:52.085421"
+    },
+    {
+      "id": 295,
+      "cell_number": 295,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:52.091730"
+    },
+    {
+      "id": 296,
+      "cell_number": 296,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:52.097645"
+    },
+    {
+      "id": 297,
+      "cell_number": 297,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:52.105593"
+    },
+    {
+      "id": 298,
+      "cell_number": 298,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:52.111215"
+    },
+    {
+      "id": 299,
+      "cell_number": 299,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:52.117021"
+    },
+    {
+      "id": 300,
+      "cell_number": 300,
+      "is_occupied": false,
+      "applicator_id": null,
+      "created_at": "2026-06-08T15:23:52.123205"
+    }
+  ]
+}

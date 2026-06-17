@@ -1,0 +1,1076 @@
+{
+  "records": [
+    {
+      "id": 1,
+      "code": "G01",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [
+        61,
+        161,
+        261,
+        1
+      ],
+      "created_at": "2026-06-06T16:36:52.977097",
+      "updated_at": "2026-06-12T16:47:45.166235"
+    },
+    {
+      "id": 2,
+      "code": "G02",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [
+        62,
+        162,
+        262
+      ],
+      "created_at": "2026-06-06T16:36:52.978003",
+      "updated_at": "2026-06-08T15:23:28.601108"
+    },
+    {
+      "id": 3,
+      "code": "G03",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [
+        163,
+        263,
+        11
+      ],
+      "created_at": "2026-06-06T16:36:52.978829",
+      "updated_at": "2026-06-12T19:05:54.560265"
+    },
+    {
+      "id": 4,
+      "code": "G04",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [
+        64,
+        164,
+        264
+      ],
+      "created_at": "2026-06-06T16:36:52.979688",
+      "updated_at": "2026-06-08T15:23:28.618016"
+    },
+    {
+      "id": 5,
+      "code": "G05",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [
+        65,
+        165,
+        265,
+        63
+      ],
+      "created_at": "2026-06-06T16:36:52.980679",
+      "updated_at": "2026-06-12T16:45:46.475678"
+    },
+    {
+      "id": 6,
+      "code": "G06",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [
+        66,
+        166,
+        266
+      ],
+      "created_at": "2026-06-06T16:36:52.981982",
+      "updated_at": "2026-06-08T15:23:28.635928"
+    },
+    {
+      "id": 7,
+      "code": "G07",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [
+        67,
+        167,
+        267
+      ],
+      "created_at": "2026-06-06T16:36:52.983259",
+      "updated_at": "2026-06-08T15:23:28.643986"
+    },
+    {
+      "id": 8,
+      "code": "G08",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [
+        68,
+        168,
+        268
+      ],
+      "created_at": "2026-06-06T16:36:52.984274",
+      "updated_at": "2026-06-08T15:23:28.653882"
+    },
+    {
+      "id": 9,
+      "code": "G09",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [
+        69,
+        169,
+        269
+      ],
+      "created_at": "2026-06-06T16:36:52.985295",
+      "updated_at": "2026-06-08T15:23:28.663620"
+    },
+    {
+      "id": 10,
+      "code": "G10",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [
+        70,
+        170,
+        270
+      ],
+      "created_at": "2026-06-06T16:36:52.986281",
+      "updated_at": "2026-06-08T15:23:28.671781"
+    },
+    {
+      "id": 11,
+      "code": "G11",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [
+        71,
+        171,
+        271
+      ],
+      "created_at": "2026-06-06T16:36:52.987482",
+      "updated_at": "2026-06-08T15:23:28.680137"
+    },
+    {
+      "id": 12,
+      "code": "G12",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [
+        72,
+        172,
+        272
+      ],
+      "created_at": "2026-06-06T16:36:52.988682",
+      "updated_at": "2026-06-08T15:23:28.689743"
+    },
+    {
+      "id": 13,
+      "code": "G13",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [
+        73,
+        173,
+        273
+      ],
+      "created_at": "2026-06-06T16:36:52.989794",
+      "updated_at": "2026-06-08T15:23:28.699741"
+    },
+    {
+      "id": 14,
+      "code": "G14",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [
+        74,
+        174,
+        274
+      ],
+      "created_at": "2026-06-06T16:36:52.991039",
+      "updated_at": "2026-06-08T15:23:28.709454"
+    },
+    {
+      "id": 15,
+      "code": "G15",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [
+        75,
+        175,
+        275
+      ],
+      "created_at": "2026-06-06T16:36:52.992131",
+      "updated_at": "2026-06-08T15:23:28.717484"
+    },
+    {
+      "id": 16,
+      "code": "G16",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [
+        76,
+        176,
+        276
+      ],
+      "created_at": "2026-06-06T16:36:52.993232",
+      "updated_at": "2026-06-08T15:23:28.727267"
+    },
+    {
+      "id": 17,
+      "code": "G17",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [
+        77,
+        177,
+        277
+      ],
+      "created_at": "2026-06-06T16:36:52.994351",
+      "updated_at": "2026-06-08T15:23:28.736468"
+    },
+    {
+      "id": 18,
+      "code": "G18",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [
+        78,
+        178,
+        278
+      ],
+      "created_at": "2026-06-06T16:36:52.995449",
+      "updated_at": "2026-06-08T15:23:28.745129"
+    },
+    {
+      "id": 19,
+      "code": "G19",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [
+        79,
+        179,
+        279
+      ],
+      "created_at": "2026-06-06T16:36:52.996603",
+      "updated_at": "2026-06-08T15:23:28.752738"
+    },
+    {
+      "id": 20,
+      "code": "G20",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [
+        80,
+        180,
+        280
+      ],
+      "created_at": "2026-06-06T16:36:52.997952",
+      "updated_at": "2026-06-08T15:23:28.760124"
+    },
+    {
+      "id": 21,
+      "code": "G21",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-06T16:36:52.999170"
+    },
+    {
+      "id": 22,
+      "code": "G22",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-06T16:36:53.000354"
+    },
+    {
+      "id": 23,
+      "code": "G23",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-06T16:36:53.001607"
+    },
+    {
+      "id": 24,
+      "code": "G24",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-06T16:36:53.002835"
+    },
+    {
+      "id": 25,
+      "code": "G25",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-06T16:36:53.004073"
+    },
+    {
+      "id": 26,
+      "code": "G26",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-06T16:36:53.005512"
+    },
+    {
+      "id": 27,
+      "code": "G27",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-06T16:36:53.006770"
+    },
+    {
+      "id": 28,
+      "code": "G28",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-06T16:36:53.008029"
+    },
+    {
+      "id": 29,
+      "code": "G29",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-06T16:36:53.009086"
+    },
+    {
+      "id": 30,
+      "code": "G30",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-06T16:36:53.010206"
+    },
+    {
+      "id": 31,
+      "code": "P01",
+      "type": "crimping",
+      "location": "Crimping",
+      "max_capacity": 3,
+      "applicators": [
+        81,
+        82,
+        181
+      ],
+      "created_at": "2026-06-06T16:36:53.011526",
+      "updated_at": "2026-06-08T15:22:49.204328"
+    },
+    {
+      "id": 32,
+      "code": "P02",
+      "type": "crimping",
+      "location": "Crimping",
+      "max_capacity": 3,
+      "applicators": [
+        83,
+        84,
+        183
+      ],
+      "created_at": "2026-06-06T16:36:53.014790",
+      "updated_at": "2026-06-08T15:22:49.210894"
+    },
+    {
+      "id": 33,
+      "code": "P03",
+      "type": "crimping",
+      "location": "Crimping",
+      "max_capacity": 3,
+      "applicators": [
+        85,
+        86,
+        185
+      ],
+      "created_at": "2026-06-06T16:36:53.017025",
+      "updated_at": "2026-06-08T15:22:49.216955"
+    },
+    {
+      "id": 34,
+      "code": "P04",
+      "type": "crimping",
+      "location": "Crimping",
+      "max_capacity": 3,
+      "applicators": [
+        87,
+        88,
+        187
+      ],
+      "created_at": "2026-06-06T16:36:53.018837",
+      "updated_at": "2026-06-08T15:22:49.223606"
+    },
+    {
+      "id": 35,
+      "code": "P05",
+      "type": "crimping",
+      "location": "Crimping",
+      "max_capacity": 3,
+      "applicators": [
+        89,
+        90,
+        189
+      ],
+      "created_at": "2026-06-06T16:36:53.020287",
+      "updated_at": "2026-06-08T15:22:49.230329"
+    },
+    {
+      "id": 36,
+      "code": "G01",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.774600"
+    },
+    {
+      "id": 37,
+      "code": "G02",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.775906"
+    },
+    {
+      "id": 38,
+      "code": "G03",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.777124"
+    },
+    {
+      "id": 39,
+      "code": "G04",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.778322"
+    },
+    {
+      "id": 40,
+      "code": "G05",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.779483"
+    },
+    {
+      "id": 41,
+      "code": "G06",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.780654"
+    },
+    {
+      "id": 42,
+      "code": "G07",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.782030"
+    },
+    {
+      "id": 43,
+      "code": "G08",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.783231"
+    },
+    {
+      "id": 44,
+      "code": "G09",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.784531"
+    },
+    {
+      "id": 45,
+      "code": "G10",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.786347"
+    },
+    {
+      "id": 46,
+      "code": "G11",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.787951"
+    },
+    {
+      "id": 47,
+      "code": "G12",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.789676"
+    },
+    {
+      "id": 48,
+      "code": "G13",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.791152"
+    },
+    {
+      "id": 49,
+      "code": "G14",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.792624"
+    },
+    {
+      "id": 50,
+      "code": "G15",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.794120"
+    },
+    {
+      "id": 51,
+      "code": "G16",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.795613"
+    },
+    {
+      "id": 52,
+      "code": "G17",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.797120"
+    },
+    {
+      "id": 53,
+      "code": "G18",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.798629"
+    },
+    {
+      "id": 54,
+      "code": "G19",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.800147"
+    },
+    {
+      "id": 55,
+      "code": "G20",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.801683"
+    },
+    {
+      "id": 56,
+      "code": "G21",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.803229"
+    },
+    {
+      "id": 57,
+      "code": "G22",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.804805"
+    },
+    {
+      "id": 58,
+      "code": "G23",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.806397"
+    },
+    {
+      "id": 59,
+      "code": "G24",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.808024"
+    },
+    {
+      "id": 60,
+      "code": "G25",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.809588"
+    },
+    {
+      "id": 61,
+      "code": "G26",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.811185"
+    },
+    {
+      "id": 62,
+      "code": "G27",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.812796"
+    },
+    {
+      "id": 63,
+      "code": "G28",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.814398"
+    },
+    {
+      "id": 64,
+      "code": "G29",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.816070"
+    },
+    {
+      "id": 65,
+      "code": "G30",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.817782"
+    },
+    {
+      "id": 66,
+      "code": "P01",
+      "type": "crimping",
+      "location": "Crimping",
+      "max_capacity": 3,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.819289"
+    },
+    {
+      "id": 67,
+      "code": "P02",
+      "type": "crimping",
+      "location": "Crimping",
+      "max_capacity": 3,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.821130"
+    },
+    {
+      "id": 68,
+      "code": "P03",
+      "type": "crimping",
+      "location": "Crimping",
+      "max_capacity": 3,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.822641"
+    },
+    {
+      "id": 69,
+      "code": "P04",
+      "type": "crimping",
+      "location": "Crimping",
+      "max_capacity": 3,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.824145"
+    },
+    {
+      "id": 70,
+      "code": "P05",
+      "type": "crimping",
+      "location": "Crimping",
+      "max_capacity": 3,
+      "applicators": [],
+      "created_at": "2026-06-08T15:22:48.825667"
+    },
+    {
+      "id": 71,
+      "code": "G01",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.068360"
+    },
+    {
+      "id": 72,
+      "code": "G02",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.070633"
+    },
+    {
+      "id": 73,
+      "code": "G03",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.072517"
+    },
+    {
+      "id": 74,
+      "code": "G04",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.074390"
+    },
+    {
+      "id": 75,
+      "code": "G05",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.076087"
+    },
+    {
+      "id": 76,
+      "code": "G06",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.077637"
+    },
+    {
+      "id": 77,
+      "code": "G07",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.079215"
+    },
+    {
+      "id": 78,
+      "code": "G08",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.080931"
+    },
+    {
+      "id": 79,
+      "code": "G09",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.082501"
+    },
+    {
+      "id": 80,
+      "code": "G10",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.084058"
+    },
+    {
+      "id": 81,
+      "code": "G11",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.085622"
+    },
+    {
+      "id": 82,
+      "code": "G12",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.087189"
+    },
+    {
+      "id": 83,
+      "code": "G13",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.088977"
+    },
+    {
+      "id": 84,
+      "code": "G14",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.090932"
+    },
+    {
+      "id": 85,
+      "code": "G15",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.092842"
+    },
+    {
+      "id": 86,
+      "code": "G16",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.094740"
+    },
+    {
+      "id": 87,
+      "code": "G17",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.096649"
+    },
+    {
+      "id": 88,
+      "code": "G18",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.098553"
+    },
+    {
+      "id": 89,
+      "code": "G19",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.100484"
+    },
+    {
+      "id": 90,
+      "code": "G20",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.102418"
+    },
+    {
+      "id": 91,
+      "code": "G21",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.104482"
+    },
+    {
+      "id": 92,
+      "code": "G22",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.106476"
+    },
+    {
+      "id": 93,
+      "code": "G23",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.108456"
+    },
+    {
+      "id": 94,
+      "code": "G24",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.110420"
+    },
+    {
+      "id": 95,
+      "code": "G25",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.112406"
+    },
+    {
+      "id": 96,
+      "code": "G26",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.114402"
+    },
+    {
+      "id": 97,
+      "code": "G27",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.116398"
+    },
+    {
+      "id": 98,
+      "code": "G28",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.118424"
+    },
+    {
+      "id": 99,
+      "code": "G29",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.120697"
+    },
+    {
+      "id": 100,
+      "code": "G30",
+      "type": "cutting",
+      "location": "Cutting",
+      "max_capacity": 5,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.123389"
+    },
+    {
+      "id": 101,
+      "code": "P01",
+      "type": "crimping",
+      "location": "Crimping",
+      "max_capacity": 3,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.125985"
+    },
+    {
+      "id": 102,
+      "code": "P02",
+      "type": "crimping",
+      "location": "Crimping",
+      "max_capacity": 3,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.128479"
+    },
+    {
+      "id": 103,
+      "code": "P03",
+      "type": "crimping",
+      "location": "Crimping",
+      "max_capacity": 3,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.130633"
+    },
+    {
+      "id": 104,
+      "code": "P04",
+      "type": "crimping",
+      "location": "Crimping",
+      "max_capacity": 3,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.132576"
+    },
+    {
+      "id": 105,
+      "code": "P05",
+      "type": "crimping",
+      "location": "Crimping",
+      "max_capacity": 3,
+      "applicators": [],
+      "created_at": "2026-06-08T15:23:28.134398"
+    }
+  ]
+}

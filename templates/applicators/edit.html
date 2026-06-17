@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Редагувати аплікатор - Система обліку{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="row">
+        <div class="col-lg-6 mx-auto">
+            <h1 class="mb-4">Редагувати {{ applicator.number }}</h1>
+
+            <div class="card">
+                <div class="card-body">
+                    <form method="POST">
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                        <div class="mb-3">
+                            <label class="form-label">Номер аплікатора</label>
+                            <input type="text" class="form-control" value="{{ applicator.number }}" disabled>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Назва</label>
+                            <input type="text" class="form-control" id="name" name="name" value="{{ applicator.name }}" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="notes" class="form-label">Примітки</label>
+                            <textarea class="form-control" id="notes" name="notes" rows="4">{{ applicator.notes or '' }}</textarea>
+                        </div>
+
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <a href="{{ url_for('applicators.applicator_detail', applicator_id=applicator.id) }}" class="btn btn-outline-secondary">Скасувати</a>
+                            <button type="submit" class="btn btn-primary">Зберегти</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

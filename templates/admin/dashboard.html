@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}Адміністрація - Система обліку{% endblock %}
+
+{% block content %}
+<div class="container-fluid py-4">
+    <div class="row mb-4">
+        <div class="col">
+            <h1>⚙️ Адміністрація</h1>
+            <p class="text-muted">Управління системою</p>
+        </div>
+    </div>
+
+    <!-- Statistics -->
+    <div class="row mb-4">
+        <div class="col-md-6 col-lg-3 mb-3">
+            <div class="card bg-primary text-white">
+                <div class="card-body">
+                    <h6 class="card-title">Всього користувачів</h6>
+                    <h3>{{ stats.total_users }}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-3">
+            <div class="card bg-success text-white">
+                <div class="card-body">
+                    <h6 class="card-title">Активних</h6>
+                    <h3>{{ stats.active_users }}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-3">
+            <div class="card bg-warning text-dark">
+                <div class="card-body">
+                    <h6 class="card-title">Адміністраторів</h6>
+                    <h3>{{ stats.admins }}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-3">
+            <div class="card bg-info text-white">
+                <div class="card-body">
+                    <h6 class="card-title">Технік / Операторів</h6>
+                    <h3>{{ stats.technicians + stats.operators }}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin menu -->
+    <div class="row">
+        <div class="col">
+            <h3 class="mb-3">Меню</h3>
+            <div class="list-group">
+                <a href="{{ url_for('admin.users') }}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                    <span>👤 Управління користувачами</span>
+                    <span class="badge bg-primary">{{ stats.total_users }}</span>
+                </a>
+                <a href="{{ url_for('applicators.list_applicators') }}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                    <span>🔧 Аплікатори</span>
+                    <span class="badge bg-info">Переглянути</span>
+                </a>
+                <a href="{{ url_for('history.movement_history') }}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                    <span>📜 Історія переміщень</span>
+                    <span class="badge bg-secondary">Переглянути</span>
+                </a>
+                <a href="{{ url_for('history.blocking_history') }}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                    <span>🔒 Історія блокування</span>
+                    <span class="badge bg-danger">Переглянути</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

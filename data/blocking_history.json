@@ -1,0 +1,159 @@
+{
+  "records": [
+    {
+      "id": 1,
+      "applicator_id": 91,
+      "applicator_code": "APP-0091",
+      "reason": "Виявлено пошкодження при огляді",
+      "user_id": 3,
+      "username": "tech2",
+      "date": "2026-06-06T16:36:53.451924",
+      "is_blocked": true,
+      "created_at": "2026-06-06T16:36:53.452443"
+    },
+    {
+      "id": 2,
+      "applicator_id": 92,
+      "applicator_code": "APP-0092",
+      "reason": "Виявлено пошкодження при огляді",
+      "user_id": 7,
+      "username": "operator3",
+      "date": "2026-06-06T16:36:53.452861",
+      "is_blocked": true,
+      "created_at": "2026-06-06T16:36:53.453355"
+    },
+    {
+      "id": 3,
+      "applicator_id": 93,
+      "applicator_code": "APP-0093",
+      "reason": "Виявлено пошкодження при огляді",
+      "user_id": 9,
+      "username": "operator5",
+      "date": "2026-06-06T16:36:53.453812",
+      "is_blocked": true,
+      "created_at": "2026-06-06T16:36:53.454351"
+    },
+    {
+      "id": 4,
+      "applicator_id": 94,
+      "applicator_code": "APP-0094",
+      "reason": "Виявлено пошкодження при огляді",
+      "user_id": 1,
+      "username": "admin",
+      "date": "2026-06-06T16:36:53.454796",
+      "is_blocked": true,
+      "created_at": "2026-06-06T16:36:53.455310"
+    },
+    {
+      "id": 5,
+      "applicator_id": 95,
+      "applicator_code": "APP-0095",
+      "reason": "Виявлено пошкодження при огляді",
+      "user_id": 1,
+      "username": "admin",
+      "date": "2026-06-06T16:36:53.455765",
+      "is_blocked": true,
+      "created_at": "2026-06-06T16:36:53.456270"
+    },
+    {
+      "id": 6,
+      "applicator_id": 64,
+      "applicator_code": "APP-0064",
+      "reason": "123",
+      "user_id": 2,
+      "username": "tech1",
+      "created_at": "2026-06-06T17:02:48.685927",
+      "is_blocked": true
+    },
+    {
+      "id": 7,
+      "applicator_id": 64,
+      "applicator_code": "APP-0064",
+      "reason": "",
+      "user_id": 2,
+      "username": "tech1",
+      "created_at": "2026-06-06T17:02:51.742807",
+      "is_blocked": false
+    },
+    {
+      "id": 8,
+      "applicator_id": 91,
+      "applicator_code": "APP-0091",
+      "reason": "",
+      "user_id": 2,
+      "username": "tech1",
+      "created_at": "2026-06-06T17:15:08.025949",
+      "is_blocked": false
+    },
+    {
+      "id": 9,
+      "applicator_id": 96,
+      "applicator_code": "APP-0096",
+      "reason": "Поломався",
+      "user_id": 2,
+      "username": "tech1",
+      "created_at": "2026-06-06T17:15:26.766799",
+      "is_blocked": true
+    },
+    {
+      "id": 10,
+      "applicator_id": 5,
+      "applicator_code": "APP-0005",
+      "reason": "534",
+      "user_id": 1,
+      "username": "admin",
+      "created_at": "2026-06-12T19:05:44.900079",
+      "is_blocked": true
+    },
+    {
+      "id": 11,
+      "applicator_id": 5,
+      "applicator_code": "APP-0005",
+      "reason": "",
+      "user_id": 1,
+      "username": "admin",
+      "created_at": "2026-06-12T19:05:46.647407",
+      "is_blocked": false
+    },
+    {
+      "id": 14,
+      "applicator_id": 305,
+      "applicator_code": "APP-322",
+      "reason": "132324324",
+      "user_id": 1,
+      "username": "admin",
+      "created_at": "2026-06-17T05:32:11.949441",
+      "is_blocked": true
+    },
+    {
+      "id": 15,
+      "applicator_id": 305,
+      "applicator_code": "APP-322",
+      "reason": "",
+      "user_id": 1,
+      "username": "admin",
+      "created_at": "2026-06-17T05:32:13.414125",
+      "is_blocked": false
+    },
+    {
+      "id": 16,
+      "applicator_id": 305,
+      "applicator_code": "APP-322",
+      "reason": "123",
+      "user_id": 1,
+      "username": "admin",
+      "created_at": "2026-06-17T05:46:12.869840",
+      "is_blocked": true
+    },
+    {
+      "id": 17,
+      "applicator_id": 305,
+      "applicator_code": "APP-322",
+      "reason": "",
+      "user_id": 1,
+      "username": "admin",
+      "created_at": "2026-06-17T05:46:18.485008",
+      "is_blocked": false
+    }
+  ]
+}
