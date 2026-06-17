@@ -11,18 +11,18 @@
         </div>
         <div class="col-auto">
             {% if current_user.is_admin() %}
-            <a href="{{ url_for('applicators.edit_applicator', applicator_id=applicator.id) }}" class="btn btn-warning">✏️ Редагувати</a>
+            <a href="{{ url_for('applicators.edit_applicator', applicator_id=applicator.id) }}" class="btn btn-warning">Редагувати</a>
             <form method="POST" action="{{ url_for('applicators.delete_applicator', applicator_id=applicator.id) }}" class="d-inline"
                   onsubmit="return confirm('Ви впевнені, що хочете видалити аплікатор {{ applicator.code }}? Цю дію не можна скасувати.')">
                 <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-                <button type="submit" class="btn btn-outline-danger">🗑️ Видалити</button>
+                <button type="submit" class="btn btn-outline-danger">Видалити</button>
             </form>
             {% endif %}
             {% if current_user.is_technician() or current_user.is_admin() %}
             {% if applicator.status == 'BLOCKED' %}
-            <button class="btn btn-success" onclick="unblockApplicator({{ applicator.id }})">🔓 Розблокувати</button>
+            <button class="btn btn-success" onclick="unblockApplicator({{ applicator.id }})">Розблокувати</button>
             {% else %}
-            <button class="btn btn-danger" onclick="blockApplicator({{ applicator.id }})">🔒 Заблокувати</button>
+            <button class="btn btn-danger" onclick="blockApplicator({{ applicator.id }})">Заблокувати</button>
             {% endif %}
             {% endif %}
         </div>
@@ -74,13 +74,7 @@
                             <th>Останнє переміщення:</th>
                             <td>{{ applicator.last_moved_at if applicator.last_moved_at else '-' }}</td>
                         </tr>
-                        <tr>
-                            <th>Коментарі:</th>
-                            <td id="applicatorComments">
-                                <div id="commentsList"></div>
-                                <button class="btn btn-sm btn-success mt-2" onclick="showAddCommentForm()">+ Додати коментар</button>
-                            </td>
-                        </tr>
+
                     </table>
                 </div>
             </div>
@@ -93,10 +87,10 @@
                 <div class="card-body">
                     {% if current_user.is_technician() or current_user.is_admin() %}
                         {% if applicator.status == 'SERVICE' %}
-                        <button class="btn btn-success w-100 mb-2" onclick="confirmService({{ applicator.id }})">✅ Підтвердити обслуговування</button>
+                        <button class="btn btn-success w-100 mb-2" onclick="confirmService({{ applicator.id }})">Підтвердити обслуговування</button>
                         {% endif %}
                     {% endif %}
-                    <a href="{{ url_for('applicators.list_applicators') }}" class="btn btn-outline-secondary w-100">← Повернутися</a>
+                    <a href="{{ url_for('applicators.list_applicators') }}" class="btn btn-outline-secondary w-100">Повернутися</a>
                 </div>
             </div>
         </div>
@@ -156,7 +150,7 @@
                         <td><small>{{ entry.created_at if entry.created_at else '-' }}</small></td>
                         <td>
                             <span class="badge bg-{% if entry.is_blocked %}danger{% else %}success{% endif %}">
-                                {{ '🔒 Заблокована' if entry.is_blocked else '🔓 Розблокована' }}
+                                {{ 'Заблокована' if entry.is_blocked else 'Розблокована' }}
                             </span>
                         </td>
                         <td><small>{{ entry.reason or '-' }}</small></td>
@@ -172,88 +166,6 @@
 </div>
 
 <script>
-function loadComments() {
-    fetch(`/applicators/{{ applicator.id }}/comments`)
-        .then(r => r.json())
-        .then(data => {
-            const commentsList = document.getElementById('commentsList');
-            if (!data.comments || data.comments.length === 0) {
-                commentsList.innerHTML = '<p class="text-muted">Немає коментарів</p>';
-                return;
-            }
-
-            let html = '<div class="list-group">';
-            for (const comment of data.comments) {
-                const date = new Date(comment.created_at).toLocaleString('uk-UA');
-                html += `<div class="list-group-item">
-                    <div class="d-flex w-100 justify-content-between">
-                        <strong>${comment.author}</strong>
-                        <small class="text-muted">${date}</small>
-                    </div>
-                    <p class="mb-1">${comment.text}</p>
-                    <button class="btn btn-sm btn-danger" onclick="deleteComment(${comment.id})">Видалити</button>
-                </div>`;
-            }
-            html += '</div>';
-            commentsList.innerHTML = html;
-        });
-}
-
-function showAddCommentForm() {
-    const commentsList = document.getElementById('commentsList');
-    const form = `<form id="addCommentForm" class="mt-2">
-        <textarea class="form-control mb-2" id="commentText" placeholder="Введіть коментар..." required rows="3"></textarea>
-        <button type="button" class="btn btn-success btn-sm" onclick="submitComment()">Додати коментар</button>
-        <button type="button" class="btn btn-secondary btn-sm" onclick="cancelComment()">Скасувати</button>
-    </form>`;
-    commentsList.innerHTML = form;
-}
-
-function submitComment() {
-    const text = document.getElementById('commentText').value.trim();
-    if (!text) {
-        alert('Будь ласка, введіть текст коментаря');
-        return;
-    }
-
-    fetch(`/applicators/{{ applicator.id }}/comment`, {
-        method: 'POST',
-        headers: csrfHeaders({'Content-Type': 'application/json'}),
-        body: JSON.stringify({text: text})
-    })
-    .then(r => r.json())
-    .then(data => {
-        if (data.success) {
-            loadComments();
-        } else {
-            alert('Помилка: ' + data.message);
-        }
-    });
-}
-
-function cancelComment() {
-    loadComments();
-}
-
-function deleteComment(commentId) {
-    if (!confirm('Ви впевнені, що хочете видалити цей коментар?')) {
-        return;
-    }
-
-    fetch(`/applicators/{{ applicator.id }}/comment/${commentId}`, {
-        method: 'DELETE',
-        headers: csrfHeaders()
-    })
-    .then(r => r.json())
-    .then(data => {
-        if (data.success) {
-            loadComments();
-        } else {
-            alert('Помилка: ' + data.message);
-        }
-    });
-}
-
 function blockApplicator(applicatorId) {
     const reason = prompt('Причина блокування:');
     if (!reason) return;
@@ -299,9 +211,5 @@ function confirmService(applicatorId) {
         }
     });
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-    loadComments();
-});
 </script>
 {% endblock %}

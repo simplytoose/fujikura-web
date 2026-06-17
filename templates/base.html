@@ -19,7 +19,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ url_for('index') }}">
-                <strong>⚙️ Fujikura Applicators</strong>
+                <strong>Fujikura Applicators</strong>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -42,9 +42,9 @@
                             <li><a class="dropdown-item" href="{{ url_for('machines.cutting') }}">Нарізка</a></li>
                             <li><a class="dropdown-item" href="{{ url_for('machines.crimping') }}">Кримпування</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="{{ url_for('locations.active') }}">✅ Активні</a></li>
-                            <li><a class="dropdown-item" href="{{ url_for('locations.inactive') }}">⛔ Неактивні</a></li>
-                            <li><a class="dropdown-item" href="{{ url_for('locations.blocked') }}">🚫 Заблоковані</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('locations.active') }}">Активні</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('locations.inactive') }}">Неактивні</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('locations.blocked') }}">Заблоковані</a></li>
                         </ul>
                     </li>
                     {% if current_user.is_authenticated and (current_user.is_admin() or current_user.is_technician() or current_user.role == 'admin' or current_user.role == 'technician') %}
@@ -65,7 +65,7 @@
                     {% endif %}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="userNav" role="button" data-bs-toggle="dropdown">
-                            👤 {{ current_user.username }}
+                            {{ current_user.username }}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="userNav">
                             <li><span class="dropdown-item-text small text-muted">{{ 'Адміністратор' if current_user.is_admin() else 'Технік' if current_user.is_technician() else 'Оператор' }}</span></li>
@@ -82,7 +82,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ url_for('index') }}">
-                <strong>⚙️ Fujikura Applicators</strong>
+                <strong>Fujikura Applicators</strong>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
