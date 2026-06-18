@@ -164,3 +164,4 @@ def delete_user(user_id):
     UserService.delete_user(user_id)
 
     return jsonify({'success': True, 'message': 'Користувач видалено'})
+

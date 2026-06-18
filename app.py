@@ -129,3 +129,4 @@ def create_production_blueprint():
 def create_management_blueprint():
     from routes_management import management_bp
     return management_bp
+

@@ -340,3 +340,4 @@ def delete_comment(applicator_id, comment_id):
 
     ApplicatorService.delete_comment(applicator_id, float(comment_id))
     return jsonify({'success': True, 'message': 'Коментар видалено'})
+

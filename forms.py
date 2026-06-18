@@ -178,3 +178,4 @@ class ChangePasswordForm(FlaskForm):
         render_kw={'class': 'form-control'}
     )
     submit = SubmitField('Змінити пароль', render_kw={'class': 'btn btn-primary'})
+

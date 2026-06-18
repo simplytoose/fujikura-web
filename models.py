@@ -561,3 +561,4 @@ class InactiveRecord:
             marked_at=data.get('marked_at'),
             is_inactive=data.get('is_inactive', True)
         )
+
