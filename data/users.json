@@ -1,0 +1,100 @@
+{
+  "records": [
+    {
+      "id": 1,
+      "username": "admin",
+      "email": "admin@fujikura.com",
+      "password_hash": "pbkdf2:sha256:600000$ZyT1fUgDDGPcKfj0$1a80438e47b447bbefd2b418f93d92153899c139138f5f5bb84e7ef959db970a",
+      "role": "admin",
+      "is_active": true,
+      "created_at": "2026-06-06T16:36:50.482159",
+      "last_login": "2026-08-13T07:08:49.299805",
+      "updated_at": "2026-08-13T07:08:49.300101"
+    },
+    {
+      "id": 2,
+      "username": "tech1",
+      "email": "tech1@fujikura.com",
+      "password_hash": "pbkdf2:sha256:600000$elQaQjwngWb10Tbk$2a6caa3e1308dddcd508007fc2e99625b944c230a450730774aef5327762485f",
+      "role": "technician",
+      "is_active": true,
+      "created_at": "2026-06-06T16:36:50.772546",
+      "last_login": "2026-06-06T17:07:19.814098",
+      "updated_at": "2026-06-06T17:07:19.814350"
+    },
+    {
+      "id": 3,
+      "username": "tech2",
+      "email": "tech2@fujikura.com",
+      "password_hash": "pbkdf2:sha256:600000$mQf1qoyVnjtKh5BM$fbeab2d19816cee866184494553d7f4143e54c6b0a8831dd9dc3ea24fcf53501",
+      "role": "technician",
+      "is_active": true,
+      "created_at": "2026-06-06T16:36:51.060162",
+      "last_login": null
+    },
+    {
+      "id": 4,
+      "username": "tech3",
+      "email": "tech3@fujikura.com",
+      "password_hash": "pbkdf2:sha256:600000$gKGYqmuzqY4lQJtk$876899959c21971c106627fdb9826d24decf050489b962a719e96880e8af4af9",
+      "role": "technician",
+      "is_active": true,
+      "created_at": "2026-06-06T16:36:51.340895",
+      "last_login": null
+    },
+    {
+      "id": 5,
+      "username": "operator1",
+      "email": "op1@fujikura.com",
+      "password_hash": "pbkdf2:sha256:600000$yyr2bGWby58AaXOl$197c645bead6f0591c0767d8c83f5107c3879f8484d3b54587ff886629b16230",
+      "role": "operator",
+      "is_active": true,
+      "created_at": "2026-06-06T16:36:51.615989",
+      "last_login": "2026-06-17T05:43:07.342662",
+      "updated_at": "2026-06-17T05:43:07.343439",
+      "theme": "light"
+    },
+    {
+      "id": 6,
+      "username": "operator2",
+      "email": "op2@fujikura.com",
+      "password_hash": "pbkdf2:sha256:600000$363tuliJLSozxBWf$d08987cd5a1e9a72b6197289669af7e22e9acf4c723aec74803ca47da35e09f7",
+      "role": "operator",
+      "is_active": true,
+      "created_at": "2026-06-06T16:36:51.887910",
+      "last_login": null
+    },
+    {
+      "id": 7,
+      "username": "operator3",
+      "email": "op3@fujikura.com",
+      "password_hash": "pbkdf2:sha256:600000$TVn84bOk01CqVbmr$a5eb5778e3416a11303ad5679e994dbe4faa74370f7fd4d1041e0f100f757091",
+      "role": "operator",
+      "is_active": true,
+      "created_at": "2026-06-06T16:36:52.152810",
+      "last_login": null
+    },
+    {
+      "id": 8,
+      "username": "operator4",
+      "email": "op4@fujikura.com",
+      "password_hash": "pbkdf2:sha256:600000$W4FHRJEuwHLDrszV$f98d18d7887d3430e25cd4435f0e0b7c72cac23753592fc1713a955a7b284291",
+      "role": "operator",
+      "is_active": true,
+      "created_at": "2026-06-06T16:36:52.427311",
+      "last_login": "2026-06-17T05:45:29.860892",
+      "updated_at": "2026-06-17T05:45:29.861515"
+    },
+    {
+      "id": 9,
+      "username": "operator5",
+      "email": "op5@fujikura.com",
+      "password_hash": "pbkdf2:sha256:600000$Yz6ISwALPmrCKMgQ$b8f0f179dc9e269cf170d82f1b74df6dc51be595aa6ea87f6315bef08f6f1de3",
+      "role": "operator",
+      "is_active": true,
+      "created_at": "2026-06-06T16:36:52.706720",
+      "last_login": "2026-06-08T15:24:57.399461",
+      "updated_at": "2026-06-08T15:24:57.399809"
+    }
+  ]
+}

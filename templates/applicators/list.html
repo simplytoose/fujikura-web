@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+
+{% block title %}Аплікатори - Система обліку{% endblock %}
+
+{% block content %}
+<div class="container-fluid py-4">
+    <div class="row mb-4">
+        <div class="col">
+            <h1>🔧 Аплікатори</h1>
+            <p class="text-muted">Список усіх аплікаторів у системі</p>
+        </div>
+        <div class="col-auto">
+            {% if current_user.is_admin() %}
+            <a href="{{ url_for('applicators.add_applicator') }}" class="btn btn-primary">+ Додати аплікатор</a>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <form method="GET" class="row g-2 g-md-3">
+                <div class="col-12 col-md-3">
+                    <label for="search" class="form-label">Пошук</label>
+                    <input type="text" class="form-control" id="search" name="search" value="{{ search or '' }}" placeholder="Код або назва">
+                </div>
+                <div class="col-12 col-md-3">
+                    <label for="status_filter" class="form-label">Статус</label>
+                    <select class="form-select" id="status_filter" name="status">
+                        <option value="">-- Всі статуси --</option>
+                        <option value="AVAILABLE" {% if status_filter == 'AVAILABLE' %}selected{% endif %}>Доступні</option>
+                        <option value="SERVICE" {% if status_filter == 'SERVICE' %}selected{% endif %}>На обслуговуванні</option>
+                        <option value="CUTTING" {% if status_filter == 'CUTTING' %}selected{% endif %}>На нарізці</option>
+                        <option value="CRIMPING" {% if status_filter == 'CRIMPING' %}selected{% endif %}>На кримпуванні</option>
+                        <option value="BLOCKED" {% if status_filter == 'BLOCKED' %}selected{% endif %}>Заблоковані</option>
+                        <option value="INACTIVE" {% if status_filter == 'INACTIVE' %}selected{% endif %}>Не використовуються</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-3">
+                    <label for="location_filter" class="form-label">Локація</label>
+                    <select class="form-select" id="location_filter" name="location">
+                        <option value="">-- Всі локації --</option>
+                        <option value="Aplicator Room" {% if location_filter == 'Aplicator Room' %}selected{% endif %}>Aplicator Room</option>
+                        <option value="Service" {% if location_filter == 'Service' %}selected{% endif %}>Обслуговування</option>
+                        <option value="Cutting" {% if location_filter == 'Cutting' %}selected{% endif %}>Нарізка</option>
+                        <option value="Crimping" {% if location_filter == 'Crimping' %}selected{% endif %}>Кримпування</option>
+                        <option value="Blocked" {% if location_filter == 'Blocked' %}selected{% endif %}>Заблоковані</option>
+                        <option value="Inactive" {% if location_filter == 'Inactive' %}selected{% endif %}>Неактивні</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-3 d-flex gap-2 align-items-end">
+                    <button type="submit" class="btn btn-primary flex-grow-1">Фільтрувати</button>
+                    <a href="{{ url_for('applicators.list_applicators') }}" class="btn btn-outline-secondary flex-grow-1">Скинути</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Applicators Table -->
+    <div class="card">
+        <div class="table-responsive">
+            <table class="table table-hover mb-0">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Номер</th>
+                        <th>Назва</th>
+                        <th>Статус</th>
+                        <th>Локація</th>
+                        <th>Машина</th>
+                        <th>Останнє переміщення</th>
+                        <th>Дії</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for applicator in applicators %}
+                    <tr>
+                        <td data-label="Номер"><strong>{{ applicator.code }}</strong></td>
+                        <td data-label="Назва">{{ applicator.name }}</td>
+                        <td data-label="Статус">
+                            <span class="badge bg-{% if applicator.status == 'AVAILABLE' %}success{% elif applicator.status == 'SERVICE' %}info{% elif applicator.status == 'BLOCKED' %}danger{% elif applicator.status == 'INACTIVE' %}dark{% else %}warning{% endif %}">
+                                {{ applicator.status }}
+                            </span>
+                        </td>
+                        <td data-label="Локація">{{ applicator.location }}</td>
+                        <td data-label="Машина">{{ applicator.machine or '-' }}</td>
+                        <td data-label="Останнє переміщення"><small class="text-muted">{{ applicator.created_at if applicator.created_at else '-' }}</small></td>
+                        <td data-label="Дії">
+                            <a href="{{ url_for('applicators.applicator_detail', applicator_id=applicator.id) }}" class="btn btn-sm btn-outline-primary">Переглянути</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="card-footer bg-light">
+            <nav aria-label="Page navigation">
+                <ul class="pagination mb-0 justify-content-center">
+                    {% if pagination.has_prev %}
+                    <li class="page-item">
+                        <a class="page-link" href="{{ url_for('applicators.list_applicators', page=pagination.prev_num, status=status_filter, location=location_filter, search=search) }}">← Попередня</a>
+                    </li>
+                    {% endif %}
+                    <li class="page-item disabled">
+                        <span class="page-link">Сторінка {{ pagination.page }} з {{ pagination.pages }}</span>
+                    </li>
+                    {% if pagination.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="{{ url_for('applicators.list_applicators', page=pagination.next_num, status=status_filter, location=location_filter, search=search) }}">Наступна →</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+{% endblock %}

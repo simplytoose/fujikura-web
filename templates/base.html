@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>{% block title %}Система обліку аплікаторів{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% if is_operator %}
+    <style>
+        .history-nav { display: none !important; }
+    </style>
+    {% endif %}
+    {% block extra_css %}{% endblock %}
+</head>
+<body class="{% if is_operator %}operator-user{% endif %}">
+    {% if current_user.is_authenticated %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='images/fujikura-logo.svg') }}" alt="Fujikura" class="navbar-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('dashboard.dashboard') }}">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('applicators.list_applicators') }}">Аплікатори</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="locationsNav" role="button" data-bs-toggle="dropdown">
+                            Локації
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="locationsNav">
+                            <li><a class="dropdown-item" href="{{ url_for('locations.room') }}">Aplicator Room</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('locations.service') }}">Обслуговування</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('machines.cutting') }}">Нарізка</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('machines.crimping') }}">Кримпування</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{{ url_for('locations.active') }}">Активні</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('locations.inactive') }}">Неактивні</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('locations.blocked') }}">Заблоковані</a></li>
+                        </ul>
+                    </li>
+                    {% if current_user.is_authenticated and (current_user.is_admin() or current_user.is_technician() or current_user.role == 'admin' or current_user.role == 'technician') %}
+                    <li class="nav-item dropdown history-nav">
+                        <a class="nav-link dropdown-toggle" href="#" id="historyNav" role="button" data-bs-toggle="dropdown">
+                            Історія
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="historyNav">
+                            <li><a class="dropdown-item" href="{{ url_for('history.movement_history') }}">Переміщення</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('history.blocking_history') }}">Блокування</a></li>
+                        </ul>
+                    </li>
+                    {% endif %}
+                    {% if current_user.is_admin() %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('admin.admin') }}">Адмін</a>
+                    </li>
+                    {% endif %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userNav" role="button" data-bs-toggle="dropdown">
+                            {{ current_user.username }}
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="userNav">
+                            <li><span class="dropdown-item-text small text-muted">{{ 'Адміністратор' if current_user.is_admin() else 'Технік' if current_user.is_technician() else 'Оператор' }}</span></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{{ url_for('auth.profile') }}">Профіль</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('auth.logout') }}">Вихід</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% else %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='images/fujikura-logo.svg') }}" alt="Fujikura" class="navbar-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('auth.login') }}">Вхід</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary btn-sm ms-2 text-white" href="{{ url_for('auth.register') }}">Реєстрація</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% endif %}
+
+    <main class="{% if current_user.is_authenticated %}main-content{% endif %}">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ 'danger' if category == 'error' else category }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <div class="container">
+            <small>&copy; 2024-2026 Fujikura Manufacturing. Система обліку та відстеження аплікаторів.</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

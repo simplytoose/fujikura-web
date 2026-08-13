@@ -1,0 +1,368 @@
+{% extends "base.html" %}
+
+{% block title %}{{ machine.code }} - Система обліку{% endblock %}
+
+{% block content %}
+<div class="container-fluid py-4">
+    <div class="row mb-4">
+        <div class="col">
+            <h1>{{ machine.code }}</h1>
+            <p class="text-muted">{% if machine.type == 'cutting' %}Машина нарізки{% else %}Машина кримпування{% endif %}</p>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-light">
+                    <h5 class="mb-0">Інформація</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table table-sm mb-0">
+                        <tr>
+                            <th>Код:</th>
+                            <td><strong>{{ machine.code }}</strong></td>
+                        </tr>
+                        <tr>
+                            <th>Тип:</th>
+                            <td>{% if machine.type == 'cutting' %}Нарізка{% else %}Кримпування{% endif %}</td>
+                        </tr>
+                        <tr>
+                            <th>Локація:</th>
+                            <td>{{ machine.location }}</td>
+                        </tr>
+                        <tr>
+                            <th>Всього:</th>
+                            <td><strong>{{ machine.total }}/{{ machine.max }}</strong></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-light">
+                    <h5 class="mb-0">Стан машини</h5>
+                </div>
+                <div class="card-body">
+                    <div class="progress mb-3" style="height: 40px;">
+                        <div class="progress-bar" role="progressbar" style="width: {{ (machine.total / machine.max) * 100 }}%;">
+                            {{ (machine.total / machine.max * 100) | int }}%
+                        </div>
+                    </div>
+                    <div class="alert {% if machine.full %}alert-danger{% elif machine.total >= machine.max * 0.8 %}alert-warning{% else %}alert-success{% endif %} mb-0">
+                        {% if machine.full %}
+                        ⚠️ <strong>Машина повна!</strong><br>Видаліть аплікатори перед додаванням нових.
+                        {% elif machine.total >= machine.max * 0.8 %}
+                        ⚠️ Машина більш ніж на 80% заповнена
+                        {% else %}
+                        ✅ Машина має вільне місце
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Applicators on machine -->
+    <div class="card">
+        <div class="card-header bg-light d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">Аплікатори</h5>
+            {% if current_user.is_technician() or current_user.is_admin() %}
+                {% if not machine.full %}
+                <button class="btn btn-sm btn-success" onclick="showAddApplicatorModal()">+ Додати аплікатор</button>
+                {% endif %}
+            {% endif %}
+        </div>
+        <div class="table-responsive">
+            <table class="table table-hover mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>Номер</th>
+                        <th>Назва</th>
+                        <th>Статус</th>
+                        <th>Дія</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if not applicators %}
+                    <tr>
+                        <td colspan="4" class="text-center text-muted py-4">На машині немає аплікаторів</td>
+                    </tr>
+                    {% endif %}
+                    {% for applicator in applicators %}
+                    <tr>
+                        <td><strong>{{ applicator.code }}</strong></td>
+                        <td>{{ applicator.name }}</td>
+                        <td>
+                            <span class="badge bg-{% if applicator.status == 'BLOCKED' %}danger{% elif applicator.status == 'CUTTING' or applicator.status == 'CRIMPING' %}warning{% else %}secondary{% endif %}">
+                                {{ applicator.status }}
+                            </span>
+                        </td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-primary" onclick="moveApplicator({{ applicator.id }}, '{{ applicator.code }}', '{{ machine.code }}')">Перемістити</button>
+                            <button class="btn btn-sm btn-outline-danger" onclick="removeApplicator({{ applicator.id }}, '{{ applicator.code }}', '{{ machine.code }}')">Видалити</button>
+                            <a href="{{ url_for('applicators.applicator_detail', applicator_id=applicator.id) }}" class="btn btn-sm btn-outline-info">Деталі</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    {% if not is_operator %}
+    <!-- Movement history -->
+    <div class="card mt-4">
+        <div class="card-header bg-light">
+            <h5 class="mb-0">Історія переміщень</h5>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-sm table-hover mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>Дата</th>
+                        <th>Аплікатор</th>
+                        <th>Дія</th>
+                        <th>Користувач</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for entry in history %}
+                    <tr>
+                        <td><small>{{ entry.moved_at if entry.moved_at else '-' }}</small></td>
+                        <td>
+                            <a href="{{ url_for('applicators.applicator_detail', applicator_id=entry.applicator_id) }}">
+                                {{ entry.applicator_code }}
+                            </a>
+                        </td>
+                        <td><small>{{ entry.comment or '-' }}</small></td>
+                        <td><small>{{ entry.username }}</small></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+<script>
+const availableApplicators = [
+    {% for app in available_applicators %}
+    {id: {{ app.id }}, code: '{{ app.code }}', name: '{{ app.name | replace("'", "\\'") }}', location: '{{ app.location }}', status: '{{ app.status }}'},
+    {% endfor %}
+];
+
+function showAddApplicatorModal() {
+    if (!availableApplicators.length) {
+        alert('Немає вільних аплікаторів для додавання');
+        return;
+    }
+
+    const options = availableApplicators.map(app =>
+        `<option value="${app.id}">${app.code} — ${app.name} (${app.location})</option>`
+    ).join('');
+
+    const dialog = document.createElement('div');
+    dialog.className = 'modal fade';
+    dialog.id = 'addModal';
+    dialog.setAttribute('tabindex', '-1');
+    dialog.innerHTML = `
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Додати аплікатор на {{ machine.code }}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Виберіть вільний аплікатор:</p>
+                    <select id="applicatorToAdd" class="form-select">
+                        <option value="">-- Виберіть аплікатор --</option>
+                        ${options}
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Скасувати</button>
+                    <button type="button" class="btn btn-success" onclick="confirmAddApplicator('{{ machine.code }}')">Додати</button>
+                </div>
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(dialog);
+    const modal = new bootstrap.Modal(dialog);
+    modal.show();
+
+    dialog.addEventListener('hidden.bs.modal', function() {
+        dialog.remove();
+    });
+}
+
+function confirmAddApplicator(machineCode) {
+    const applicatorId = document.getElementById('applicatorToAdd').value;
+
+    if (!applicatorId) {
+        alert('Виберіть аплікатор');
+        return;
+    }
+
+    fetch('/machines/add-to-machine', {
+        method: 'POST',
+        headers: csrfHeaders({'Content-Type': 'application/json'}),
+        body: JSON.stringify({
+            applicator_id: parseInt(applicatorId, 10),
+            machine_code: machineCode
+        })
+    })
+    .then(async r => {
+        const text = await r.text();
+        let data;
+        try {
+            data = JSON.parse(text);
+        } catch (e) {
+            console.error('Response text:', text);
+            throw new Error(r.ok ? 'Неправильна відповідь сервера' : `HTTP ${r.status}: ${r.statusText}`);
+        }
+        if (!r.ok || !data.success) {
+            throw new Error(data.message || `HTTP ${r.status}: ${r.statusText}`);
+        }
+        return data;
+    })
+    .then(data => {
+        alert(data.message || 'Аплікатор успішно додано');
+        location.reload();
+    })
+    .catch(err => {
+        console.error('Fetch error:', err);
+        alert('Помилка при додаванні: ' + err.message);
+    });
+}
+
+function removeApplicator(applicatorId, applicatorCode, machineCode) {
+    if (!confirm(`Ви впевнені, що хочете видалити аплікатор ${applicatorCode} з машини?`)) {
+        return;
+    }
+
+    fetch('/machines/remove-from-machine', {
+        method: 'POST',
+        headers: csrfHeaders({'Content-Type': 'application/json'}),
+        body: JSON.stringify({
+            applicator_id: applicatorId,
+            machine_code: machineCode
+        })
+    })
+    .then(r => r.json())
+    .then(data => {
+        if (data.success) {
+            alert('Аплікатор успішно видалено з машини');
+            location.reload();
+        } else {
+            alert('Помилка: ' + data.message);
+        }
+    })
+    .catch(err => {
+        alert('Помилка при видаленні: ' + err.message);
+    });
+}
+
+function moveApplicator(applicatorId, applicatorCode, currentMachineCode) {
+    const machineType = '{{ machine.type }}';
+    let machinePrefix = machineType === 'cutting' ? 'G' : 'P';
+    let maxMachines = machineType === 'cutting' ? 30 : 5;
+
+    let machines = [];
+    for (let i = 1; i <= maxMachines; i++) {
+        let code = machinePrefix + String(i).padStart(2, '0');
+        if (code !== currentMachineCode) {
+            machines.push(code);
+        }
+    }
+
+    let machineList = machines.map(m => `<option value="${m}">${m}</option>`).join('');
+
+    let html = `
+        <div>
+            <p>Виберіть машину для переміщення аплікатора <strong>${applicatorCode}</strong>:</p>
+            <select id="targetMachine" class="form-select">
+                <option value="">-- Виберіть машину --</option>
+                ${machineList}
+            </select>
+        </div>
+    `;
+
+    const dialog = document.createElement('div');
+    dialog.className = 'modal fade';
+    dialog.id = 'moveModal';
+    dialog.setAttribute('tabindex', '-1');
+    dialog.innerHTML = `
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Переміщення аплікатора</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    ${html}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Скасувати</button>
+                    <button type="button" class="btn btn-primary" onclick="confirmMove(${applicatorId}, '${currentMachineCode}')">Перемістити</button>
+                </div>
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(dialog);
+    const modal = new bootstrap.Modal(dialog);
+    modal.show();
+
+    dialog.addEventListener('hidden.bs.modal', function() {
+        dialog.remove();
+    });
+}
+
+function confirmMove(applicatorId, fromMachineCode) {
+    const targetMachine = document.getElementById('targetMachine').value;
+
+    if (!targetMachine) {
+        alert('Виберіть машину призначення');
+        return;
+    }
+
+    fetch(`/machines/${fromMachineCode}/move/${applicatorId}`, {
+        method: 'POST',
+        headers: csrfHeaders({'Content-Type': 'application/json'}),
+        body: JSON.stringify({
+            to_machine_code: targetMachine
+        })
+    })
+    .then(async r => {
+        const text = await r.text();
+        let data;
+        try {
+            data = JSON.parse(text);
+        } catch (e) {
+            console.error('Response text:', text);
+            throw new Error(r.ok ? 'Неправильна відповідь сервера' : `HTTP ${r.status}: ${r.statusText}`);
+        }
+        if (!r.ok || !data.success) {
+            throw new Error(data.message || `HTTP ${r.status}: ${r.statusText}`);
+        }
+        return data;
+    })
+    .then(data => {
+        if (data.success) {
+            alert('Аплікатор успішно переміщено');
+            location.reload();
+        } else {
+            alert('Помилка: ' + data.message);
+        }
+    })
+    .catch(err => {
+        console.error('Fetch error:', err);
+        alert('Помилка при переміщенні: ' + err.message);
+    });
+}
+</script>
+{% endblock %}

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вхід - Система обліку аплікаторів</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.25);
+            --glass-border: rgba(255, 255, 255, 0.4);
+            --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+            --text-dark: #333333;
+            --text-muted: #444444;
+            --primary-blue: #1652b0;
+            --primary-hover: #1e40af;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Inter', sans-serif;
+            background: #dbeafe; /* fallback */
+            position: relative;
+            overflow: hidden;
+            color: var(--text-dark);
+        }
+
+        /* Abstract blurred orbs background */
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(90px);
+            z-index: 0;
+            opacity: 0.8;
+        }
+        .orb-1 { width: 500px; height: 500px; background: #6b21a8; top: -100px; left: -50px; opacity: 0.5; }
+        .orb-2 { width: 600px; height: 600px; background: #3b82f6; bottom: -200px; right: -100px; opacity: 0.4; }
+        .orb-3 { width: 450px; height: 450px; background: #d946ef; bottom: 10%; left: 10%; opacity: 0.4; }
+        .orb-4 { width: 450px; height: 450px; background: #06b6d4; top: 10%; right: 20%; opacity: 0.4; }
+        .orb-5 { width: 300px; height: 300px; background: #818cf8; top: 40%; left: 40%; opacity: 0.3; }
+
+        .glass-panel {
+            position: relative;
+            z-index: 10;
+            background: var(--glass-bg);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 40px 48px;
+            width: 100%;
+            max-width: 380px;
+            box-shadow: var(--glass-shadow), inset 0 0 0 1px rgba(255,255,255,0.3);
+            text-align: center;
+        }
+
+        .logo-container {
+            margin-bottom: 24px;
+        }
+
+        .logo-container img {
+            width: 50px;
+            margin-bottom: 12px;
+            opacity: 0.65;
+            filter: grayscale(100%) contrast(150%);
+        }
+
+        .brand-name {
+            font-size: 26px;
+            font-weight: 700;
+            color: #222;
+            margin: 0;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin: 6px 0 24px 0;
+            font-weight: 500;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+            text-align: left;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 12px;
+            font-weight: 500;
+            margin-bottom: 6px;
+            color: var(--text-dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px 14px;
+            background: rgba(255, 255, 255, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            border-radius: 8px;
+            font-size: 14px;
+            color: var(--text-dark);
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+            font-family: 'Inter', sans-serif;
+            outline: none;
+        }
+
+        .form-control:focus {
+            background: rgba(255, 255, 255, 0.7);
+            border-color: rgba(255, 255, 255, 1);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.02), 0 0 0 3px rgba(255,255,255,0.3);
+        }
+
+        .form-check {
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+            text-align: left;
+        }
+
+        .form-check-input {
+            appearance: none;
+            width: 14px;
+            height: 14px;
+            border: 1px solid rgba(255,255,255,0.8);
+            border-radius: 3px;
+            background: rgba(255,255,255,0.4);
+            margin-right: 8px;
+            cursor: pointer;
+            position: relative;
+            outline: none;
+        }
+
+        .form-check-input:checked {
+            background: rgba(255,255,255,0.8);
+        }
+
+        .form-check-input:checked::after {
+            content: '';
+            position: absolute;
+            left: 3px;
+            top: 1px;
+            width: 4px;
+            height: 7px;
+            border: solid var(--text-dark);
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+
+        .form-check-label {
+            font-size: 12px;
+            color: var(--text-dark);
+            font-weight: 500;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .btn-primary {
+            width: 100%;
+            padding: 12px;
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.1s ease;
+            box-shadow: 0 4px 12px rgba(22, 82, 176, 0.4);
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 16px;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-hover);
+        }
+        
+        .btn-primary:active {
+            transform: scale(0.98);
+        }
+
+        .signup-link {
+            font-size: 12px;
+            color: var(--text-dark);
+        }
+
+        .signup-link a {
+            color: #6366f1;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-text {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.9);
+            z-index: 10;
+            letter-spacing: 0.3px;
+            font-weight: 400;
+        }
+
+        /* Error styling */
+        .is-invalid {
+            border-color: rgba(239, 68, 68, 0.6) !important;
+            background: rgba(254, 226, 226, 0.6) !important;
+        }
+        .invalid-feedback {
+            color: #b91c1c;
+            font-size: 11px;
+            margin-top: 4px;
+            text-align: left;
+            display: block;
+        }
+        .flash-messages {
+            margin-bottom: 16px;
+        }
+        .alert {
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            margin-bottom: 8px;
+            background: rgba(255,255,255,0.6);
+            border: 1px solid rgba(255,255,255,0.8);
+            text-align: left;
+            color: #333;
+        }
+        .alert-error, .alert-danger {
+            background: rgba(254, 226, 226, 0.8);
+            color: #991b1b;
+            border-color: rgba(239, 68, 68, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+    <div class="orb orb-5"></div>
+
+    <div class="glass-panel">
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/fujikura-logo.svg') }}" alt="Fujikura Logo" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\' fill=\'none\' stroke=\'%23555\' stroke-width=\'12\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><path d=\'M30 70 L30 30 L70 30 M30 50 L60 50\'/></svg>'">
+            <h1 class="brand-name">Fujikura</h1>
+            <p class="subtitle">Система обліку аплікаторів</p>
+        </div>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ 'danger' if category == 'error' else category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST" action="{{ url_for('auth.login') }}" novalidate>
+            {{ form.hidden_tag() }}
+            
+            <div class="form-group">
+                {{ form.username.label(class="form-label", text="Ім'я користувача") }}
+                {% if form.username.errors %}
+                    {{ form.username(class="form-control is-invalid", placeholder="") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.username.errors %}
+                            {{ error }}
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.username(class="form-control", placeholder="") }}
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                {{ form.password.label(class="form-label", text="Пароль") }}
+                {% if form.password.errors %}
+                    {{ form.password(class="form-control is-invalid", placeholder="") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.password.errors %}
+                            {{ error }}
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.password(class="form-control", placeholder="") }}
+                {% endif %}
+            </div>
+
+            <div class="form-check">
+                {{ form.remember(class="form-check-input") }}
+                {{ form.remember.label(class="form-check-label", text="Запам'ятати мене") }}
+            </div>
+
+            <button type="submit" class="btn-primary">Вхід</button>
+        </form>
+
+        <div class="signup-link">
+            Немаєте обліку? <a href="{{ url_for('auth.register') }}">Зареєструйтеся як технік</a>
+        </div>
+    </div>
+
+    <div class="footer-text">
+        Антарктика ін разова... Розробники...
+    </div>
+</body>
+</html>
+
