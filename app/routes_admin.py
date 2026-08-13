@@ -1,9 +1,9 @@
 from flask import Blueprint, render_template, request, redirect, url_for, flash, jsonify
 from flask_login import login_required, current_user
-from services.user_service import UserService
-from models import RoleEnum
+from app.services.user_service import UserService
+from app.models import RoleEnum
 from functools import wraps
-from forms import AdminCreateUserForm, EditUserForm
+from app.forms import AdminCreateUserForm, EditUserForm
 from math import ceil
 
 admin_bp = Blueprint('admin', __name__, url_prefix='/admin')

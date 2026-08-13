@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, request, redirect, url_for, flash
 from flask_login import login_required, current_user
-from services.movement_service import MovementService, BlockingService
+from app.services.movement_service import MovementService, BlockingService
 from datetime import datetime, timedelta
 
 history_bp = Blueprint('history', __name__, url_prefix='/history')

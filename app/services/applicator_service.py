@@ -1,7 +1,7 @@
-from data_manager import dm
-from models import Applicator, StatusEnum
+from app.data_manager import dm
+from app.models import Applicator, StatusEnum
 from datetime import datetime
-from services.room_service import ApplicatorRoomService
+from app.services.room_service import ApplicatorRoomService
 
 
 class ApplicatorService:

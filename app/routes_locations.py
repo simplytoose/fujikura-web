@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, redirect, url_for, flash
 from flask_login import login_required, current_user
-from services.applicator_service import ApplicatorService
-from models import StatusEnum, Location
+from app.services.applicator_service import ApplicatorService
+from app.models import StatusEnum, Location
 
 locations_bp = Blueprint('locations', __name__, url_prefix='/locations')
 

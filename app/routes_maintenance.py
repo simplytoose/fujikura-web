@@ -1,8 +1,8 @@
 from flask import Blueprint, request, jsonify, flash, redirect, url_for
 from flask_login import login_required, current_user
-from services.applicator_service import ApplicatorService
-from services.maintenance_service import MaintenanceService
-from models import StatusEnum
+from app.services.applicator_service import ApplicatorService
+from app.services.maintenance_service import MaintenanceService
+from app.models import StatusEnum
 
 maintenance_bp = Blueprint('maintenance', __name__, url_prefix='/maintenance')
 

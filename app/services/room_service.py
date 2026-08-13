@@ -1,5 +1,5 @@
-from data_manager import dm
-from models import ApplicatorCell, ServiceAreaConfirmation, InactiveRecord
+from app.data_manager import dm
+from app.models import ApplicatorCell, ServiceAreaConfirmation, InactiveRecord
 from datetime import datetime
 
 

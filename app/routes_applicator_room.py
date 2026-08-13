@@ -1,10 +1,10 @@
 from flask import Blueprint, render_template, request, redirect, url_for, flash, jsonify
 from flask_login import login_required, current_user
-from services.applicator_service import ApplicatorService
-from services.room_service import ApplicatorRoomService, ServiceAreaService, InactiveApplicatorService
-from services.movement_service import MovementService
-from services.production_service import CuttingAreaService, CrimpingAreaService
-from models import StatusEnum
+from app.services.applicator_service import ApplicatorService
+from app.services.room_service import ApplicatorRoomService, ServiceAreaService, InactiveApplicatorService
+from app.services.movement_service import MovementService
+from app.services.production_service import CuttingAreaService, CrimpingAreaService
+from app.models import StatusEnum
 from functools import wraps
 from datetime import datetime
 

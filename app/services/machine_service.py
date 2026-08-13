@@ -1,6 +1,6 @@
-from data_manager import dm
-from models import Machine
-from services.applicator_service import ApplicatorService
+from app.data_manager import dm
+from app.models import Machine
+from app.services.applicator_service import ApplicatorService
 from datetime import datetime
 
 
@@ -205,7 +205,7 @@ class MachineService:
         if applicator_id not in from_machine.applicators:
             return False, f"Аплікатор не знаходиться на машині {from_machine_code}"
 
-        from models import StatusEnum
+        from app.models import StatusEnum
         if applicator.status == StatusEnum.BLOCKED.value:
             return False, "Неможливо перемістити заблокований аплікатор"
 

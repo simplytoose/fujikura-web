@@ -1,5 +1,5 @@
-from data_manager import dm
-from models import MovementRecord, BlockingRecord
+from app.data_manager import dm
+from app.models import MovementRecord, BlockingRecord
 from datetime import datetime, timedelta
 
 

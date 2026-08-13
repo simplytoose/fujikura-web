@@ -1,7 +1,7 @@
 import json
 import os
 import logging
-from models import MaintenanceRecord
+from app.models import MaintenanceRecord
 
 logger = logging.getLogger(__name__)
 

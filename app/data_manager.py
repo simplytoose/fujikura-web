@@ -6,9 +6,11 @@ import threading
 
 class DataManager:
 
-
-    def __init__(self, data_dir: str = 'data'):
-        self.data_dir = data_dir
+    def __init__(self, data_dir: str = None):
+        if data_dir is None:
+            self.data_dir = os.path.join(os.path.dirname(__file__), 'data')
+        else:
+            self.data_dir = data_dir
         self.lock = threading.Lock()
         self._ensure_directory()
 

@@ -1,9 +1,9 @@
 from flask import Blueprint, render_template, request, redirect, url_for, flash, jsonify
 from flask_login import login_required, current_user
-from services.machine_service import MachineService
-from services.applicator_service import ApplicatorService
-from services.movement_service import MovementService
-from models import StatusEnum
+from app.services.machine_service import MachineService
+from app.services.applicator_service import ApplicatorService
+from app.services.movement_service import MovementService
+from app.models import StatusEnum
 from functools import wraps
 
 machines_bp = Blueprint('machines', __name__, url_prefix='/machines')

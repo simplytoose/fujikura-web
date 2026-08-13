@@ -1,5 +1,5 @@
-from data_manager import dm
-from models import Applicator, StatusEnum
+from app.data_manager import dm
+from app.models import Applicator, StatusEnum
 from datetime import datetime
 
 

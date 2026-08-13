@@ -1,10 +1,10 @@
 from flask import Blueprint, render_template, request
 from flask_login import login_required
-from services.applicator_service import ApplicatorService
-from services.machine_service import MachineService
-from services.room_service import ApplicatorRoomService, ServiceAreaService, InactiveApplicatorService
-from services.production_service import CuttingAreaService, CrimpingAreaService
-from services.movement_service import MovementService
+from app.services.applicator_service import ApplicatorService
+from app.services.machine_service import MachineService
+from app.services.room_service import ApplicatorRoomService, ServiceAreaService, InactiveApplicatorService
+from app.services.production_service import CuttingAreaService, CrimpingAreaService
+from app.services.movement_service import MovementService
 
 dashboard_bp = Blueprint('dashboard', __name__, url_prefix='/dashboard')
 

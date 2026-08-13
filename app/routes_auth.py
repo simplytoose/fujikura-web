@@ -1,9 +1,9 @@
 from flask import Blueprint, render_template, request, redirect, url_for, flash
 from flask import jsonify
 from flask_login import login_user, logout_user, current_user, login_required
-from services.user_service import UserService
-from models import RoleEnum
-from forms import LoginForm, RegistrationForm, ChangePasswordForm
+from app.services.user_service import UserService
+from app.models import RoleEnum
+from app.forms import LoginForm, RegistrationForm, ChangePasswordForm
 
 auth_bp = Blueprint('auth', __name__, url_prefix='/auth')
 

@@ -1,9 +1,9 @@
 from flask import Blueprint, render_template, request, redirect, url_for, flash, jsonify
 from flask_login import login_required, current_user
-from services.applicator_service import ApplicatorService
-from services.room_service import ServiceAreaService, InactiveApplicatorService
-from services.movement_service import MovementService
-from models import StatusEnum
+from app.services.applicator_service import ApplicatorService
+from app.services.room_service import ServiceAreaService, InactiveApplicatorService
+from app.services.movement_service import MovementService
+from app.models import StatusEnum
 from functools import wraps
 
 service_area_bp = Blueprint('service_area', __name__, url_prefix='/service-area')

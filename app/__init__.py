@@ -1,10 +1,10 @@
 from flask import Flask, render_template, redirect, url_for
 from flask_login import LoginManager, current_user
 from flask_wtf.csrf import CSRFProtect
-from config import config
-from models import User
-from services.user_service import UserService
-from data_manager import DataManager
+from app.config import config
+from app.models import User
+from app.services.user_service import UserService
+from app.data_manager import DataManager
 import os
 
 
@@ -79,60 +79,60 @@ def create_app(config_name=None):
 
 
 def create_auth_blueprint():
-    from routes_auth import auth_bp
+    from app.routes_auth import auth_bp
     return auth_bp
 
 
 def create_dashboard_blueprint():
-    from routes_dashboard import dashboard_bp
+    from app.routes_dashboard import dashboard_bp
     return dashboard_bp
 
 
 def create_applicators_blueprint():
-    from routes_applicators import applicators_bp
+    from app.routes_applicators import applicators_bp
     return applicators_bp
 
 
 def create_locations_blueprint():
-    from routes_locations import locations_bp
+    from app.routes_locations import locations_bp
     return locations_bp
 
 
 def create_machines_blueprint():
-    from routes_machines import machines_bp
+    from app.routes_machines import machines_bp
     return machines_bp
 
 
 def create_history_blueprint():
-    from routes_history import history_bp
+    from app.routes_history import history_bp
     return history_bp
 
 
 def create_admin_blueprint():
-    from routes_admin import admin_bp
+    from app.routes_admin import admin_bp
     return admin_bp
 
 
 def create_applicator_room_blueprint():
-    from routes_applicator_room import applicator_room_bp
+    from app.routes_applicator_room import applicator_room_bp
     return applicator_room_bp
 
 
 def create_service_area_blueprint():
-    from routes_service_area import service_area_bp
+    from app.routes_service_area import service_area_bp
     return service_area_bp
 
 
 def create_production_blueprint():
-    from routes_production import production_bp
+    from app.routes_production import production_bp
     return production_bp
 
 
 def create_management_blueprint():
-    from routes_management import management_bp
+    from app.routes_management import management_bp
     return management_bp
 
 def create_maintenance_blueprint():
-    from routes_maintenance import maintenance_bp
+    from app.routes_maintenance import maintenance_bp
     return maintenance_bp
 

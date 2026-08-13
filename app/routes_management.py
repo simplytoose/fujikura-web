@@ -1,11 +1,11 @@
 from flask import Blueprint, render_template, request, redirect, url_for, flash, jsonify
 from flask_login import login_required, current_user
-from services.applicator_service import ApplicatorService
-from services.movement_service import BlockingService
-from services.room_service import InactiveApplicatorService
-from services.validation_service import ValidationService
-from services.movement_service import MovementService
-from models import StatusEnum
+from app.services.applicator_service import ApplicatorService
+from app.services.movement_service import BlockingService
+from app.services.room_service import InactiveApplicatorService
+from app.services.validation_service import ValidationService
+from app.services.movement_service import MovementService
+from app.models import StatusEnum
 from functools import wraps
 from datetime import datetime
 

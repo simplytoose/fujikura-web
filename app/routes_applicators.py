@@ -1,9 +1,9 @@
 from flask import Blueprint, render_template, request, redirect, url_for, flash, jsonify
 from flask_login import login_required, current_user
-from services.applicator_service import ApplicatorService
-from services.movement_service import MovementService, BlockingService
-from services.maintenance_service import MaintenanceService
-from models import StatusEnum
+from app.services.applicator_service import ApplicatorService
+from app.services.movement_service import MovementService, BlockingService
+from app.services.maintenance_service import MaintenanceService
+from app.models import StatusEnum
 from functools import wraps
 
 applicators_bp = Blueprint('applicators', __name__, url_prefix='/applicators')
