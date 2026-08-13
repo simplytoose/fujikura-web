@@ -11,33 +11,44 @@
         </div>
         <div class="col-auto">
             {% if current_user.is_admin() %}
-<<<<<<< HEAD
-            <a href="{{ url_for('applicators.edit_applicator', applicator_id=applicator.id) }}" class="btn btn-warning">Редагувати</a>
-            <form method="POST" action="{{ url_for('applicators.delete_applicator', applicator_id=applicator.id) }}" class="d-inline"
-                  onsubmit="return confirm('Ви впевнені, що хочете видалити аплікатор {{ applicator.code }}? Цю дію не можна скасувати.')">
-                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-                <button type="submit" class="btn btn-outline-danger">Видалити</button>
-=======
             <a href="{{ url_for('applicators.edit_applicator', applicator_id=applicator.id) }}" class="btn btn-warning">✏️ Редагувати</a>
             <form method="POST" action="{{ url_for('applicators.delete_applicator', applicator_id=applicator.id) }}" class="d-inline"
                   onsubmit="return confirm('Ви впевнені, що хочете видалити аплікатор {{ applicator.code }}? Цю дію не можна скасувати.')">
                 <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
                 <button type="submit" class="btn btn-outline-danger">🗑️ Видалити</button>
->>>>>>> 2741c9e (24)
             </form>
             {% endif %}
             {% if current_user.is_technician() or current_user.is_admin() %}
             {% if applicator.status == 'BLOCKED' %}
-<<<<<<< HEAD
-            <button class="btn btn-success" onclick="unblockApplicator({{ applicator.id }})">Розблокувати</button>
-            {% else %}
-            <button class="btn btn-danger" onclick="blockApplicator({{ applicator.id }})">Заблокувати</button>
-=======
             <button class="btn btn-success" onclick="unblockApplicator({{ applicator.id }})">🔓 Розблокувати</button>
             {% else %}
             <button class="btn btn-danger" onclick="blockApplicator({{ applicator.id }})">🔒 Заблокувати</button>
->>>>>>> 2741c9e (24)
             {% endif %}
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Cycle Counter Progress Bar -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <h5 class="card-title">⚙️ Спрацьовування (Лічильник циклів)</h5>
+            {% set percent = (applicator.current_cycles / applicator.max_cycles * 100) | round(1) %}
+            {% if percent > 100 %}{% set percent = 100 %}{% endif %}
+            <div class="d-flex justify-content-between mb-1">
+                <span>Поточний стан: <strong>{{ "{:,}".format(applicator.current_cycles) }}</strong> циклів</span>
+                <span>Ліміт ТО: <strong>{{ "{:,}".format(applicator.max_cycles) }}</strong></span>
+            </div>
+            <div class="progress" style="height: 25px;">
+                <div class="progress-bar {% if percent >= 100 %}bg-danger{% elif percent >= 80 %}bg-warning{% else %}bg-success{% endif %}" 
+                     role="progressbar" style="width: {{ percent }}%;" aria-valuenow="{{ applicator.current_cycles }}" 
+                     aria-valuemin="0" aria-valuemax="{{ applicator.max_cycles }}">
+                     {{ percent }}%
+                </div>
+            </div>
+            {% if applicator.current_cycles >= applicator.max_cycles %}
+            <div class="alert alert-danger mt-3 mb-0">
+                ⚠️ Увага! Аплікатор перевищив ліміт циклів і потребує технічного обслуговування (ТО).
+            </div>
             {% endif %}
         </div>
     </div>
@@ -61,7 +72,7 @@
                         <tr>
                             <th>Статус:</th>
                             <td>
-                                <span class="badge bg-{% if applicator.status == 'AVAILABLE' %}success{% elif applicator.status == 'SERVICE' %}info{% elif applicator.status == 'BLOCKED' %}danger{% elif applicator.status == 'INACTIVE' %}dark{% else %}warning{% endif %}">
+                                <span class="badge bg-{% if applicator.status == 'AVAILABLE' %}success{% elif applicator.status == 'SERVICE' or applicator.status == 'NEEDS_TO' %}info{% elif applicator.status == 'BLOCKED' %}danger{% elif applicator.status == 'INACTIVE' or applicator.status == 'WRITTEN_OFF' %}dark{% else %}warning{% endif %}">
                                     {{ applicator.status }}
                                 </span>
                             </td>
@@ -88,9 +99,6 @@
                             <th>Останнє переміщення:</th>
                             <td>{{ applicator.last_moved_at if applicator.last_moved_at else '-' }}</td>
                         </tr>
-<<<<<<< HEAD
-
-=======
                         <tr>
                             <th>Коментарі:</th>
                             <td id="applicatorComments">
@@ -98,32 +106,66 @@
                                 <button class="btn btn-sm btn-success mt-2" onclick="showAddCommentForm()">+ Додати коментар</button>
                             </td>
                         </tr>
->>>>>>> 2741c9e (24)
                     </table>
                 </div>
             </div>
         </div>
         <div class="col-lg-6">
-            <div class="card">
+            <div class="card h-100">
                 <div class="card-header bg-light">
                     <h5 class="mb-0">Дії</h5>
                 </div>
-                <div class="card-body">
+                <div class="card-body d-flex flex-column">
                     {% if current_user.is_technician() or current_user.is_admin() %}
                         {% if applicator.status == 'SERVICE' %}
-<<<<<<< HEAD
-                        <button class="btn btn-success w-100 mb-2" onclick="confirmService({{ applicator.id }})">Підтвердити обслуговування</button>
-                        {% endif %}
-                    {% endif %}
-                    <a href="{{ url_for('applicators.list_applicators') }}" class="btn btn-outline-secondary w-100">Повернутися</a>
-=======
                         <button class="btn btn-success w-100 mb-2" onclick="confirmService({{ applicator.id }})">✅ Підтвердити обслуговування</button>
                         {% endif %}
+                        <button type="button" class="btn btn-info w-100 mb-2 text-white" data-bs-toggle="modal" data-bs-target="#maintenanceModal">
+                            🛠️ Зафіксувати ТО (обнулити лічильник)
+                        </button>
                     {% endif %}
-                    <a href="{{ url_for('applicators.list_applicators') }}" class="btn btn-outline-secondary w-100">← Повернутися</a>
->>>>>>> 2741c9e (24)
+                    <a href="{{ url_for('applicators.list_applicators') }}" class="btn btn-outline-secondary w-100 mt-auto">← Повернутися</a>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Maintenance History -->
+    <div class="card mb-4">
+        <div class="card-header bg-light">
+            <h5 class="mb-0">Журнал ремонтів та запчастин (ТО)</h5>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-sm table-hover mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>Дата</th>
+                        <th>Технік</th>
+                        <th>Замінені деталі</th>
+                        <th>Причина / Опис</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if maintenance_records %}
+                        {% for record in maintenance_records|sort(attribute='date', reverse=True) %}
+                        <tr>
+                            <td><small>{{ record.date }}</small></td>
+                            <td>{{ record.technician_name }}</td>
+                            <td>
+                                {% for part in record.replaced_parts %}
+                                <span class="badge bg-secondary">{{ part }}</span>
+                                {% endfor %}
+                            </td>
+                            <td>{{ record.reason }}</td>
+                        </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
+                            <td colspan="4" class="text-center text-muted">Немає записів про технічне обслуговування.</td>
+                        </tr>
+                    {% endif %}
+                </tbody>
+            </table>
         </div>
     </div>
 
@@ -181,11 +223,7 @@
                         <td><small>{{ entry.created_at if entry.created_at else '-' }}</small></td>
                         <td>
                             <span class="badge bg-{% if entry.is_blocked %}danger{% else %}success{% endif %}">
-<<<<<<< HEAD
-                                {{ 'Заблокована' if entry.is_blocked else 'Розблокована' }}
-=======
                                 {{ '🔒 Заблокована' if entry.is_blocked else '🔓 Розблокована' }}
->>>>>>> 2741c9e (24)
                             </span>
                         </td>
                         <td><small>{{ entry.reason or '-' }}</small></td>
@@ -200,9 +238,44 @@
     {% endif %}
 </div>
 
+<!-- Maintenance Modal -->
+{% if current_user.is_technician() or current_user.is_admin() %}
+<div class="modal fade" id="maintenanceModal" tabindex="-1" aria-labelledby="maintenanceModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content glass-card">
+      <div class="modal-header">
+        <h5 class="modal-title" id="maintenanceModalLabel">Зафіксувати ТО (Аплікатор {{ applicator.code }})</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="{{ url_for('maintenance.add_maintenance_record') }}" method="POST">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <input type="hidden" name="applicator_id" value="{{ applicator.id }}">
+        
+        <div class="modal-body">
+          <div class="mb-3">
+            <label class="form-label">Замінені деталі (через кому)</label>
+            <input type="text" class="form-control" name="replaced_parts" placeholder="Ножі, ковадла, фіксатори...">
+            <div class="form-text">Наприклад: Ніж обрізний, Ковадло переднє</div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Причина / Опис робіт <span class="text-danger">*</span></label>
+            <textarea class="form-control" name="reason" rows="3" required placeholder="Планове ТО після 100к циклів..."></textarea>
+          </div>
+          <div class="alert alert-info">
+            Збереження цього запису автоматично <strong>обнулить лічильник циклів</strong> аплікатора.
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Скасувати</button>
+          <button type="submit" class="btn btn-primary">Зберегти запис</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endif %}
+
 <script>
-<<<<<<< HEAD
-=======
 function loadComments() {
     fetch(`/applicators/{{ applicator.id }}/comments`)
         .then(r => r.json())
@@ -234,7 +307,7 @@ function showAddCommentForm() {
     const commentsList = document.getElementById('commentsList');
     const form = `<form id="addCommentForm" class="mt-2">
         <textarea class="form-control mb-2" id="commentText" placeholder="Введіть коментар..." required rows="3"></textarea>
-        <button type="button" class="btn btn-success btn-sm" onclick="submitComment()">Додати коментар</button>
+        <button type="button" class="btn btn-success btn-sm" onclick="submitComment()">Додати</button>
         <button type="button" class="btn btn-secondary btn-sm" onclick="cancelComment()">Скасувати</button>
     </form>`;
     commentsList.innerHTML = form;
@@ -249,7 +322,10 @@ function submitComment() {
 
     fetch(`/applicators/{{ applicator.id }}/comment`, {
         method: 'POST',
-        headers: csrfHeaders({'Content-Type': 'application/json'}),
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': document.querySelector('meta[name="csrf-token"]')?.content || document.querySelector('input[name="csrf_token"]')?.value
+        },
         body: JSON.stringify({text: text})
     })
     .then(r => r.json())
@@ -273,7 +349,9 @@ function deleteComment(commentId) {
 
     fetch(`/applicators/{{ applicator.id }}/comment/${commentId}`, {
         method: 'DELETE',
-        headers: csrfHeaders()
+        headers: {
+            'X-CSRFToken': document.querySelector('meta[name="csrf-token"]')?.content || document.querySelector('input[name="csrf_token"]')?.value
+        }
     })
     .then(r => r.json())
     .then(data => {
@@ -285,14 +363,16 @@ function deleteComment(commentId) {
     });
 }
 
->>>>>>> 2741c9e (24)
 function blockApplicator(applicatorId) {
     const reason = prompt('Причина блокування:');
     if (!reason) return;
 
     fetch(`/applicators/${applicatorId}/block`, {
         method: 'POST',
-        headers: csrfHeaders({'Content-Type': 'application/json'}),
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': document.querySelector('meta[name="csrf-token"]')?.content || document.querySelector('input[name="csrf_token"]')?.value
+        },
         body: JSON.stringify({reason: reason})
     })
     .then(r => r.json())
@@ -307,7 +387,12 @@ function blockApplicator(applicatorId) {
 }
 
 function unblockApplicator(applicatorId) {
-    fetch(`/applicators/${applicatorId}/unblock`, {method: 'POST', headers: csrfHeaders()})
+    fetch(`/applicators/${applicatorId}/unblock`, {
+        method: 'POST', 
+        headers: {
+            'X-CSRFToken': document.querySelector('meta[name="csrf-token"]')?.content || document.querySelector('input[name="csrf_token"]')?.value
+        }
+    })
     .then(r => r.json())
     .then(data => {
         if (data.success) {
@@ -320,7 +405,12 @@ function unblockApplicator(applicatorId) {
 }
 
 function confirmService(applicatorId) {
-    fetch(`/applicators/${applicatorId}/confirm-service`, {method: 'POST', headers: csrfHeaders()})
+    fetch(`/applicators/${applicatorId}/confirm-service`, {
+        method: 'POST', 
+        headers: {
+            'X-CSRFToken': document.querySelector('meta[name="csrf-token"]')?.content || document.querySelector('input[name="csrf_token"]')?.value
+        }
+    })
     .then(r => r.json())
     .then(data => {
         if (data.success) {
@@ -331,12 +421,9 @@ function confirmService(applicatorId) {
         }
     });
 }
-<<<<<<< HEAD
-=======
 
 document.addEventListener('DOMContentLoaded', function() {
     loadComments();
 });
->>>>>>> 2741c9e (24)
 </script>
 {% endblock %}

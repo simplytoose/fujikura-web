@@ -2,6 +2,7 @@ from flask import Blueprint, render_template, request, redirect, url_for, flash,
 from flask_login import login_required, current_user
 from services.applicator_service import ApplicatorService
 from services.movement_service import MovementService, BlockingService
+from services.maintenance_service import MaintenanceService
 from models import StatusEnum
 from functools import wraps
 
@@ -110,11 +111,13 @@ def applicator_detail(applicator_id):
 
     history = MovementService.get_movements_by_applicator(applicator_id)
     blocking_history = BlockingService.get_blocking_history_for_applicator(applicator_id)
+    maintenance_records = MaintenanceService.get_records_by_applicator(applicator_id)
 
     return render_template('applicators/detail.html',
                          applicator=applicator,
                          history=history,
-                         blocking_history=blocking_history)
+                         blocking_history=blocking_history,
+                         maintenance_records=maintenance_records)
 
 
 @applicators_bp.route('/add', methods=['GET', 'POST'])

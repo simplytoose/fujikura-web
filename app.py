@@ -41,6 +41,7 @@ def create_app(config_name=None):
     service_area_bp = create_service_area_blueprint()
     production_bp = create_production_blueprint()
     management_bp = create_management_blueprint()
+    maintenance_bp = create_maintenance_blueprint()
 
     app.register_blueprint(auth_bp)
     app.register_blueprint(dashboard_bp)
@@ -53,6 +54,7 @@ def create_app(config_name=None):
     app.register_blueprint(service_area_bp)
     app.register_blueprint(production_bp)
     app.register_blueprint(management_bp)
+    app.register_blueprint(maintenance_bp)
 
     @app.context_processor
     def inject_user():
@@ -129,4 +131,8 @@ def create_production_blueprint():
 def create_management_blueprint():
     from routes_management import management_bp
     return management_bp
+
+def create_maintenance_blueprint():
+    from routes_maintenance import maintenance_bp
+    return maintenance_bp
 

@@ -17,6 +17,10 @@ class StatusEnum(Enum):
     CRIMPING = "CRIMPING"
     BLOCKED = "BLOCKED"
     INACTIVE = "INACTIVE"
+    NEEDS_TO = "NEEDS_TO"
+    IN_REPAIR = "IN_REPAIR"
+    IN_RESERVE = "IN_RESERVE"
+    WRITTEN_OFF = "WRITTEN_OFF"
 
 
 class User(UserMixin):
@@ -128,7 +132,8 @@ class Applicator:
                  is_configured=False, configured_by=None, configured_at=None,
                  on_machine=False, on_shelf=False, blocked_reason=None,
                  blocked_by=None, blocked_at=None, inactive_reason=None,
-                 inactive_by=None, inactive_at=None, comments=None):
+                 inactive_by=None, inactive_at=None, comments=None,
+                 current_cycles=0, max_cycles=100000):
         self.id = id
         self.code = code
         self._name = name or code
@@ -153,6 +158,8 @@ class Applicator:
         self.inactive_by = inactive_by
         self.inactive_at = inactive_at
         self.comments = comments or []
+        self.current_cycles = current_cycles
+        self.max_cycles = max_cycles
 
     @property
     def number(self):
@@ -215,7 +222,9 @@ class Applicator:
             'inactive_reason': self.inactive_reason,
             'inactive_by': self.inactive_by,
             'inactive_at': self.inactive_at,
-            'comments': self.comments
+            'comments': self.comments,
+            'current_cycles': self.current_cycles,
+            'max_cycles': self.max_cycles
         }
 
     @staticmethod
@@ -245,7 +254,9 @@ class Applicator:
             inactive_reason=data.get('inactive_reason'),
             inactive_by=data.get('inactive_by'),
             inactive_at=data.get('inactive_at'),
-            comments=data.get('comments', [])
+            comments=data.get('comments', []),
+            current_cycles=data.get('current_cycles', 0),
+            max_cycles=data.get('max_cycles', 100000)
         )
 
 
@@ -562,3 +573,39 @@ class InactiveRecord:
             is_inactive=data.get('is_inactive', True)
         )
 
+class MaintenanceRecord:
+    def __init__(self, id=None, applicator_id=None, applicator_code=None,
+                 replaced_parts=None, reason=None, technician_id=None, technician_name=None, date=None):
+        self.id = id
+        self.applicator_id = applicator_id
+        self.applicator_code = applicator_code
+        self.replaced_parts = replaced_parts or [] 
+        self.reason = reason or ""
+        self.technician_id = technician_id
+        self.technician_name = technician_name
+        self.date = date or datetime.utcnow().isoformat()
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'applicator_id': self.applicator_id,
+            'applicator_code': self.applicator_code,
+            'replaced_parts': self.replaced_parts,
+            'reason': self.reason,
+            'technician_id': self.technician_id,
+            'technician_name': self.technician_name,
+            'date': self.date
+        }
+
+    @staticmethod
+    def from_dict(data):
+        return MaintenanceRecord(
+            id=data.get('id'),
+            applicator_id=data.get('applicator_id'),
+            applicator_code=data.get('applicator_code'),
+            replaced_parts=data.get('replaced_parts', []),
+            reason=data.get('reason'),
+            technician_id=data.get('technician_id'),
+            technician_name=data.get('technician_name'),
+            date=data.get('date')
+        )

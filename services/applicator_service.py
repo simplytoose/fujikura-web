@@ -56,7 +56,8 @@ class ApplicatorService:
         allowed_keys = ['location', 'status', 'machine', 'shelf_position', 'notes', 'last_moved_at',
                        'technician_id', 'name', 'cell_number', 'is_configured', 'configured_by',
                        'configured_at', 'on_machine', 'on_shelf', 'blocked_reason', 'blocked_by',
-                       'blocked_at', 'inactive_reason', 'inactive_by', 'inactive_at', 'comments']
+                       'blocked_at', 'inactive_reason', 'inactive_by', 'inactive_at', 'comments',
+                       'current_cycles', 'max_cycles']
         for key in allowed_keys:
             if key in kwargs:
                 update_data[key] = kwargs[key]
@@ -289,3 +290,29 @@ class ApplicatorService:
     def update_applicator_name(app_id, name):
 
         return ApplicatorService.update_applicator(app_id, name=name)
+
+    @staticmethod
+    def add_cycles(app_id, cycles):
+        app = ApplicatorService.get_applicator(app_id)
+        if not app:
+            return None
+        
+        new_cycles = app.current_cycles + cycles
+        new_status = app.status
+        
+        if new_cycles >= app.max_cycles and app.status != StatusEnum.SERVICE.value and app.status != StatusEnum.IN_REPAIR.value and app.status != StatusEnum.WRITTEN_OFF.value:
+            new_status = StatusEnum.NEEDS_TO.value
+            
+        return ApplicatorService.update_applicator(
+            app_id,
+            current_cycles=new_cycles,
+            status=new_status
+        )
+
+    @staticmethod
+    def reset_cycles(app_id):
+        return ApplicatorService.update_applicator(
+            app_id,
+            current_cycles=0,
+            status=StatusEnum.AVAILABLE.value
+        )
